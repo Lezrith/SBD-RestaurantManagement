@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8F41BEFC-712E-FA1F-9DCB-10BA47B9DE41" name="Stolik">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:36:31 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numer" id="4F228435-8087-52CB-4A1A-7883E21F850B">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:36:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Liczba_miejsc" id="AE2CB485-F072-F830-0F6B-1E2618EF9688">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:59:52 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1A6C07D3-F07F-C36D-DC4E-1DEAC3B65FB2" name="Stolik PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:36:39 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4F228435-8087-52CB-4A1A-7883E21F850B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

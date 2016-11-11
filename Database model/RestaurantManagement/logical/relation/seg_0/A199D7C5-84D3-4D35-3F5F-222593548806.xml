@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_2v1" directorySegmentName="seg_0" id="A199D7C5-84D3-4D35-3F5F-222593548806">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:13:48 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<sourcePk>E10B8BC5-BB74-08BA-1313-289C5F5C6B56</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>pracuje jako</nameOnSource>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>210AC7FE-620A-D85D-ACB2-9038E2456E98</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DD775752-97B5-0F01-1B38-CCB7804EB58E</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

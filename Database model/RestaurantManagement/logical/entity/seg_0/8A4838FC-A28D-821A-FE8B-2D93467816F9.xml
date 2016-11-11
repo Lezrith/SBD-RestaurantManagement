@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8A4838FC-A28D-821A-FE8B-2D93467816F9" name="Dostarczenie">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:36:05 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Ilość" id="0BDAEDA6-8D66-A3A1-8058-D28B09EF044A">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:37:23 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Data" id="E7A7E463-A151-2791-B55F-BCBC620215A4">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:37:55 UTC</createdTime>
+<generatorID>A506ED06-6763-303D-533E-821BB125C284</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>A6D9D415-3BA3-0220-93B7-13BE70235B6E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa" id="C2812994-34E7-E451-6EBC-FE60AEC646E7">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:37:55 UTC</createdTime>
+<generatorID>A506ED06-6763-303D-533E-821BB125C284</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>9EB32C99-8DEA-E797-6292-793413B3EEE7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa1" id="1A87C496-6642-F7EB-6023-B049A54EF293">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:38:35 UTC</createdTime>
+<generatorID>97C9FB36-4B38-206F-7D80-916B6268923B</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>98CA43CA-A33F-13A2-FA7E-0DDC383CA6E5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="63FB08EA-2B90-FF10-64B1-1E266476CD9B" name="Dostarczenie PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:36:23 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E7A7E463-A151-2791-B55F-BCBC620215A4</attributeRef>
+<attributeRef>C2812994-34E7-E451-6EBC-FE60AEC646E7</attributeRef>
+<attributeRef>1A87C496-6642-F7EB-6023-B049A54EF293</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

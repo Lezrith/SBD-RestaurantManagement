@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DD775752-97B5-0F01-1B38-CCB7804EB58E" name="Etat">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:35:09 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nazwa" id="CBB9DA59-3E1D-9DD1-EE69-957711D32A12">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:35:29 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Placa_startowa" id="D1B6EA26-3468-6BAD-5FC7-820126D56F73">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:35:46 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="A7D8843E-D149-4BA4-A1D5-A575CB4CC583">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:13:48 UTC</createdTime>
+<generatorID>A199D7C5-84D3-4D35-3F5F-222593548806</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CBB85F28-9CBD-BA67-B47A-F6A10D59FF66" name="Etat PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:35:45 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CBB9DA59-3E1D-9DD1-EE69-957711D32A12</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

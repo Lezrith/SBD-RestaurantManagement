@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1991F1B2-4136-C6D5-21BA-A52C3A21A856" name="Dostawca">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:38:18 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nazwa" id="6A695403-F8DC-DE43-2DCF-59325B6E95ED">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:38:23 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Adres_email" id="94B17128-D6E9-B8B5-3D8F-DC0F7B4DC858">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:39:41 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefon" id="467AA298-74AE-0675-4EE8-8682D5B83EF0">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:39:41 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="466006CC-5265-4F28-8D1A-4F54BBBF31E6">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:50:13 UTC</createdTime>
+<generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>A3026742-993F-88E7-F260-4D81A8153ED3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="764420AC-C984-3A89-A77A-5E322CA9A1E1" name="Dostawca PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:38:26 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6A695403-F8DC-DE43-2DCF-59325B6E95ED</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

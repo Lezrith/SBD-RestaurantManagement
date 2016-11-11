@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A54F5AEC-5EE3-7661-84C5-7DFFE5D5E038" name="Zamowienie_dania">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:29:11 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Godzina" id="F0F3A461-EEC7-2A91-D0A1-08FBF9ECDE40">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:32:45 UTC</createdTime>
+<generatorID>ED35745D-E7A7-5BE8-05FF-F53EA284F7BD</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>36FA253D-2543-D91D-3F75-F7B05553C936</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer" id="6AD18DD0-9A55-8770-096A-E6F7628008F2">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:32:45 UTC</createdTime>
+<generatorID>ED35745D-E7A7-5BE8-05FF-F53EA284F7BD</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>C91611F7-BC32-3708-4751-D3DB46BED5CA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID" id="CE567EF1-8C8B-FC72-5E6E-FF185BCEB3D9">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:32:45 UTC</createdTime>
+<generatorID>ED35745D-E7A7-5BE8-05FF-F53EA284F7BD</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>03644B8D-0382-998A-CD8C-8A2062EE8D60</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ilosc" id="194AFC39-8094-F1A5-6C7C-9243BF9855CB">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:33:10 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="4FB241B6-0CAB-99C3-F866-9A0D83B15B97">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:33:48 UTC</createdTime>
+<generatorID>D8CD6538-BAFE-3F82-0FE1-04AC25C93EFB</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>A4D23F1A-AA62-F127-793F-4627CF570CD4</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CB2457FA-7ACE-0D47-8D8C-6F68CE087E5F" name="Zamowienie_dania PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:32:45 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F0F3A461-EEC7-2A91-D0A1-08FBF9ECDE40</attributeRef>
+<attributeRef>6AD18DD0-9A55-8770-096A-E6F7628008F2</attributeRef>
+<attributeRef>CE567EF1-8C8B-FC72-5E6E-FF185BCEB3D9</attributeRef>
+<attributeRef>4FB241B6-0CAB-99C3-F866-9A0D83B15B97</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

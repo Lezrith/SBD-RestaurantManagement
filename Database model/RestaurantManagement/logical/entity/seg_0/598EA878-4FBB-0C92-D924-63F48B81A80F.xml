@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="598EA878-4FBB-0C92-D924-63F48B81A80F" name="Adres">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:29:25 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="A3026742-993F-88E7-F260-4D81A8153ED3">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:49:45 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ulica" id="1502E2BA-F4F3-CF83-CABA-7DF8800DE8D7">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:29:30 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer" id="4CE4C8CA-12B9-A17A-6C0C-B66B7AB4B569">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:29:49 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer_lokalu" id="CA826636-C2D2-B211-7028-7A20E79418CE">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:30:02 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Kod_pocztowy" id="80C6D425-D04B-9135-648A-A5CFBEF8FC4E">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:30:11 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Miasto" id="1AB6A188-EC34-9529-5111-2DB9FB4FDFF1">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:30:33 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="94928CD0-1CCA-7394-B086-01865155EBDA">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:50:16 UTC</createdTime>
+<generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa" id="0D8ECDF8-97D8-F950-1A4A-94DE5D823A72">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 16:25:34 UTC</createdTime>
+<generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>6A695403-F8DC-DE43-2DCF-59325B6E95ED</referedAttribute>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B83D8F43-B23F-79AD-79B7-299007A16D99" name="Adres PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:49:55 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A3026742-993F-88E7-F260-4D81A8153ED3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
