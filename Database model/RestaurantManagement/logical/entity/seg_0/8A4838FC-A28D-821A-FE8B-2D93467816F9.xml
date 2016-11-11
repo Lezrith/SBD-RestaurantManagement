@@ -12,7 +12,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="Ilość" id="0BDAEDA6-8D66-A3A1-8058-D28B09EF044A">
+<Attribute name="Ilosc" id="0BDAEDA6-8D66-A3A1-8058-D28B09EF044A">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 17:37:23 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
@@ -42,7 +42,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="Nazwa1" id="1A87C496-6642-F7EB-6023-B049A54EF293">
 <createdBy>Krzysiu</createdBy>
@@ -54,7 +54,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
