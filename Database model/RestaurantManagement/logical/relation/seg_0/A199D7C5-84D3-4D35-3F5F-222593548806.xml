@@ -4,13 +4,14 @@
 <createdTime>2016-11-11 16:13:48 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <sourcePk>E10B8BC5-BB74-08BA-1313-289C5F5C6B56</sourcePk>
+<targetPk>CBB85F28-9CBD-BA67-B47A-F6A10D59FF66</targetPk>
 <identifying>false</identifying>
 <nameOnSource>pracuje jako</nameOnSource>
 <optionalSource>false</optionalSource>
 <optionalTarget>true</optionalTarget>
-<sourceCardinality>1</sourceCardinality>
+<sourceCardinality>*</sourceCardinality>
 <sourceEntity>210AC7FE-620A-D85D-ACB2-9038E2456E98</sourceEntity>
-<targetCardinalityString>*</targetCardinalityString>
+<targetCardinalityString>1</targetCardinalityString>
 <targetEntity>DD775752-97B5-0F01-1B38-CCB7804EB58E</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>

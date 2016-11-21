@@ -81,6 +81,18 @@
 <logicalDatatype>LOGDT057</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="Nazwa" id="22BA8BC9-6999-512F-5FFC-E73A74646DCE">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-21 18:21:05 UTC</createdTime>
+<generatorID>A199D7C5-84D3-4D35-3F5F-222593548806</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>CBB9DA59-3E1D-9DD1-EE69-957711D32A12</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="E10B8BC5-BB74-08BA-1313-289C5F5C6B56" name="Pracownik PK">

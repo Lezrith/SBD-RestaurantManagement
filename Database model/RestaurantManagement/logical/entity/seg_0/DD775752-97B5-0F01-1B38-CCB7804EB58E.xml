@@ -31,18 +31,6 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID" id="A7D8843E-D149-4BA4-A1D5-A575CB4CC583">
-<createdBy>Krzysiu</createdBy>
-<createdTime>2016-11-11 16:13:48 UTC</createdTime>
-<generatorID>A199D7C5-84D3-4D35-3F5F-222593548806</generatorID>
-<ownerDesignName>RestaurantManagement</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<referedAttribute>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CBB85F28-9CBD-BA67-B47A-F6A10D59FF66" name="Etat PK">
