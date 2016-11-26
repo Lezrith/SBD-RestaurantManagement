@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="ECCCF13A-70B8-87DB-1922-BF29922844A6" name="Zamowienia_dan">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>A54F5AEC-5EE3-7661-84C5-7DFFE5D5E038</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>zamowienie_dania</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Zamowienie_Godzina" id="571C676B-75C5-B557-C4C7-0D3EC969740D">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>F0F3A461-EEC7-2A91-D0A1-08FBF9ECDE40</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Godzina</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="79B5B490-4830-A0EB-8D90-CCEE58182BE1" referredColumn="FB0728BA-819C-DD0E-83D3-C6DF9D142261"/>
+</associations>
+</Column>
+<Column name="Zamowienie_Stolik_Numer" id="89EE7AF0-4BF5-7D4D-97AD-C88C3CADFCC9">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>6AD18DD0-9A55-8770-096A-E6F7628008F2</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Stolik_Numer</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="79B5B490-4830-A0EB-8D90-CCEE58182BE1" referredColumn="CB3B516D-E3B8-6D6B-A585-CBA752843FE9"/>
+</associations>
+</Column>
+<Column name="Zamowienie_Pracownik_ID" id="259A4C19-4172-4D65-0D8E-1578423F2EB4">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>CE567EF1-8C8B-FC72-5E6E-FF185BCEB3D9</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Pracownik_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="79B5B490-4830-A0EB-8D90-CCEE58182BE1" referredColumn="33783CC3-7B74-AE20-EFBD-9EB53E7541A2"/>
+</associations>
+</Column>
+<Column name="Ilosc" id="E0D13F20-9760-F378-5B38-E5CC3489194D">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>194AFC39-8094-F1A5-6C7C-9243BF9855CB</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_dan_Ilosc</notNullConstraintName>
+</Column>
+<Column name="Danie_ID" id="CF026E12-6B15-C39F-13AA-28D011DC2DD6">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>4FB241B6-0CAB-99C3-F866-9A0D83B15B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_dan_Danie_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="7C191CCA-48EC-FF0C-B1C1-36FA89A59A63" referredColumn="11A27C48-79CB-6F6D-9CBA-A3AF33956D08"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1612E718-F355-7526-550A-C0DF61B82692" name="Zamowienia_dan_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>CB2457FA-7ACE-0D47-8D8C-6F68CE087E5F</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="571C676B-75C5-B557-C4C7-0D3EC969740D"/>
+<colUsage columnID="89EE7AF0-4BF5-7D4D-97AD-C88C3CADFCC9"/>
+<colUsage columnID="259A4C19-4172-4D65-0D8E-1578423F2EB4"/>
+<colUsage columnID="CF026E12-6B15-C39F-13AA-28D011DC2DD6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B04D111F-7B0C-C80D-0A7A-8C6CF95FEA39" name="Zamowienia_dan_Zamowienia_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>ED35745D-E7A7-5BE8-05FF-F53EA284F7BD</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="571C676B-75C5-B557-C4C7-0D3EC969740D"/>
+<colUsage columnID="89EE7AF0-4BF5-7D4D-97AD-C88C3CADFCC9"/>
+<colUsage columnID="259A4C19-4172-4D65-0D8E-1578423F2EB4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1017062E-D04A-6E54-B8F1-DAB2B4D6B410" name="Zamowienia_dan_Dania_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>D8CD6538-BAFE-3F82-0FE1-04AC25C93EFB</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF026E12-6B15-C39F-13AA-28D011DC2DD6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

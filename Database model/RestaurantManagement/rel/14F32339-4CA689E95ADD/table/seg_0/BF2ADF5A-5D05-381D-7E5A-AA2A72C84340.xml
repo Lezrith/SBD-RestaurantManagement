@@ -1,0 +1,40 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BF2ADF5A-5D05-381D-7E5A-AA2A72C84340" name="Metody_platnosci">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>F9BA92CE-EE2A-B692-E479-965627B7F418</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>metoda_platnosci</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nazwa" id="86CAEF63-8675-D588-79F2-883320493BC8">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>E8D15E06-4093-F214-BB0F-7D6A74CA55B7</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Metody_platnosci_Nazwa</notNullConstraintName>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BB0538A-CB65-DC3A-E76E-5989043FBDB5" name="Metody_platnosci_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>F7E207AB-AC47-4AF7-C7C6-6C3C73685720</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86CAEF63-8675-D588-79F2-883320493BC8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
