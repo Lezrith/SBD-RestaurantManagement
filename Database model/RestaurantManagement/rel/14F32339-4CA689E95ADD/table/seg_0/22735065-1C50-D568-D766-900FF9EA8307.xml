@@ -16,8 +16,10 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,5,3</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Dostarczenia_Ilosc</notNullConstraintName>
 </Column>
@@ -37,7 +39,7 @@
 <colAssociation fkAssociation="EBC71FD7-B610-B083-FE4A-00A0E7BBAF5C" referredColumn="B46DBAF7-F9E0-6D04-165A-AD3071871E45"/>
 </associations>
 </Column>
-<Column name="Dostawa_Dostawca_Nazwa" id="A70A5907-B27E-526B-F837-CABFC61A29A7">
+<Column name="Dostawca_Nazwa" id="A70A5907-B27E-526B-F837-CABFC61A29A7">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>C2812994-34E7-E451-6EBC-FE60AEC646E7</generatorID>

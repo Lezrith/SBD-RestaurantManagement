@@ -25,7 +25,7 @@
 <colAssociation fkAssociation="79B5B490-4830-A0EB-8D90-CCEE58182BE1" referredColumn="FB0728BA-819C-DD0E-83D3-C6DF9D142261"/>
 </associations>
 </Column>
-<Column name="Zamowienie_Stolik_Numer" id="89EE7AF0-4BF5-7D4D-97AD-C88C3CADFCC9">
+<Column name="Stolik_Numer" id="89EE7AF0-4BF5-7D4D-97AD-C88C3CADFCC9">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>6AD18DD0-9A55-8770-096A-E6F7628008F2</generatorID>
@@ -41,7 +41,7 @@
 <colAssociation fkAssociation="79B5B490-4830-A0EB-8D90-CCEE58182BE1" referredColumn="CB3B516D-E3B8-6D6B-A585-CBA752843FE9"/>
 </associations>
 </Column>
-<Column name="Zamowienie_Pracownik_ID" id="259A4C19-4172-4D65-0D8E-1578423F2EB4">
+<Column name="Pracownik_ID" id="259A4C19-4172-4D65-0D8E-1578423F2EB4">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>CE567EF1-8C8B-FC72-5E6E-FF185BCEB3D9</generatorID>
