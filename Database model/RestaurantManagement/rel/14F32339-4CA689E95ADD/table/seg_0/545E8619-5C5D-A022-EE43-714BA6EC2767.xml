@@ -120,6 +120,17 @@
 <colAssociation fkAssociation="BEB83AD5-5C22-8D96-5385-B431D8BDB360" referredColumn="4470CC17-0066-87F7-322A-8476B69D3807"/>
 </associations>
 </Column>
+<Column name="Haslo_hasz" id="49C1F9FF-81B3-0478-E92E-45890F86208F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:58:30 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="872365B2-C44C-A5C4-F381-577D37119896" name="Pracownicy_PK">

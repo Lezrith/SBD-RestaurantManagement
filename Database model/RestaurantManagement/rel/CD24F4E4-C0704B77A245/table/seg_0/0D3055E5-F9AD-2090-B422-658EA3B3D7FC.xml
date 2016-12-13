@@ -120,6 +120,16 @@
 <colAssociation fkAssociation="08BF513C-C8E0-0D52-E51E-D6EAAC7154FA" referredColumn="96070B03-1B61-9034-95B9-71298AB2E43A"/>
 </associations>
 </Column>
+<Column name="Hashed_password" id="733C64C3-C761-EB80-D259-309E316AABF1">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:57:59 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="413CA3FD-C009-CC12-01CF-E8D40DB2CF43" name="Employees_PK">
