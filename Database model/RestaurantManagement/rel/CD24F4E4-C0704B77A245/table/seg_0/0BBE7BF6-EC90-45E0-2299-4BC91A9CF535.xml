@@ -1,0 +1,105 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0BBE7BF6-EC90-45E0-2299-4BC91A9CF535" name="Reservations">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>D4936B98-777B-D6C5-6BED-96726949A184</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>rezerwacja</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Date" id="503C78EF-D9D6-9204-86EE-D3722D2455CA">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>2878100A-BA79-C21D-00E5-8FF9E25BE9E0</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Rezerwacje_Dzień</notNullConstraintName>
+</Column>
+<Column name="Start" id="69760D0F-9283-B4D7-B5A2-D56BE98C5DB1">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>0E2D2F22-9F9B-AEFC-89B3-5FD3B71FB4AE</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Rezerwacje_Godzina_rozpoczecia</notNullConstraintName>
+</Column>
+<Column name="End" id="5C17AE42-0AAA-E5D2-8340-C378AC7A5E13">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>ABA67E00-9DC4-A8E0-51DE-15DB9AFB1C31</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Rezerwacje_Godzina_zakonczenia</notNullConstraintName>
+</Column>
+<Column name="Name" id="B1E9AA28-803E-CFD7-55AB-4730395FAD3E">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>D4B24C98-5269-C282-5455-54AF35FFE23E</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Rezerwacje_Nazwisko</notNullConstraintName>
+</Column>
+<Column name="Table_Number" id="0DE8DA1E-0179-C247-11E6-87D65F397F70">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>4A3CF6EC-A5F9-2C47-DF6A-7C5236E7FB3A</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Rezerwacje_Stolik_Numer</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="7D810026-FE22-4191-A489-0EEF6CBE566D" referredColumn="1A4CF16D-D4D3-679A-33B2-4293742CB07E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="54E1D52D-79BA-73DA-EDD6-F86F2D543B00" name="Reservations_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>445981DE-F2C6-E624-DB96-346AD116BD92</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="503C78EF-D9D6-9204-86EE-D3722D2455CA"/>
+<colUsage columnID="69760D0F-9283-B4D7-B5A2-D56BE98C5DB1"/>
+<colUsage columnID="0DE8DA1E-0179-C247-11E6-87D65F397F70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="779A8C1E-5925-9BC1-4F7D-72A41BF59DF0" name="Reservations_Tables_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>E798CE55-B106-0107-E1CB-C255791BE4D8</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DE8DA1E-0179-C247-11E6-87D65F397F70"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

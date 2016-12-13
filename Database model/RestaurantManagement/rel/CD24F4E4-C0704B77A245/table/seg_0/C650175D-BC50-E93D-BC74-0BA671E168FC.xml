@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C650175D-BC50-E93D-BC74-0BA671E168FC" name="Suppliers">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>1991F1B2-4136-C6D5-21BA-A52C3A21A856</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>dostawca</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="D42AA8F0-CFE6-B5C7-23CF-503624F9240F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>6A695403-F8DC-DE43-2DCF-59325B6E95ED</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Nazwa</notNullConstraintName>
+</Column>
+<Column name="Email_address" id="AB1AED11-4EF5-3CAD-EF8F-03F58F37C6FF">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>94B17128-D6E9-B8B5-3D8F-DC0F7B4DC858</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Adres_email</notNullConstraintName>
+</Column>
+<Column name="Phone_number" id="8923B005-B221-CD15-A19C-B4D007E3EE62">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>467AA298-74AE-0675-4EE8-8682D5B83EF0</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Telefon</notNullConstraintName>
+</Column>
+<Column name="Address_ID" id="1746A584-616E-CAC6-CF04-22DCBB7B518C">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>466006CC-5265-4F28-8D1A-4F54BBBF31E6</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Adres_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="B9FDF7BD-9DD5-9C86-72ED-9A217AE4BC70" referredColumn="E45FDBE4-2870-8B49-9C91-3A93B057C088"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3AF074C9-FCFD-8A8B-4367-645D8A11B24F" name="Suppliers_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>764420AC-C984-3A89-A77A-5E322CA9A1E1</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D42AA8F0-CFE6-B5C7-23CF-503624F9240F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3089281B-BE4C-A00A-C3DE-A82CB96110AE" name="Suppliers_Addresses_ID_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1746A584-616E-CAC6-CF04-22DCBB7B518C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CCA8065E-0257-8193-7BC0-081D180570AA" name="Suppliers_Addresses_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1746A584-616E-CAC6-CF04-22DCBB7B518C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F41746B-59D4-EFF4-6878-C326404F85BF" name="Assignments">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>relation_14</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Shift_Name" id="D99678C0-3170-FF76-5160-D97618355539">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Przydzialy_Zmiana_Numer</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="8D98FDEA-822A-F9FE-D503-7DCBCED28AEF" referredColumn="20FE3C10-561D-0ED6-1EE7-00A88B4D5F56"/>
+</associations>
+</Column>
+<Column name="Employee_ID" id="FF487DE1-20FE-086E-F399-C2C4BE131655">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Przydzialy_Pracownik_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="CB59597F-B66B-AE0D-C8AD-F80603DFA01A" referredColumn="825A0853-ED84-F3CE-30F7-3556A0751F62"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="36034F4C-64A1-E3C7-A355-9F4FCF43357F" name="Assignments_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D99678C0-3170-FF76-5160-D97618355539"/>
+<colUsage columnID="FF487DE1-20FE-086E-F399-C2C4BE131655"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BDA48939-3E62-E158-24EB-BC13908B7CD3" name="Assignments_Shifts_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>92B7E72A-66C2-9325-FAB5-C02C06AE7483</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D99678C0-3170-FF76-5160-D97618355539"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C5AF0988-9797-FAD3-A060-C6040CD116C6" name="Assignments_Employees_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>92B7E72A-66C2-9325-FAB5-C02C06AE7483</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF487DE1-20FE-086E-F399-C2C4BE131655"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

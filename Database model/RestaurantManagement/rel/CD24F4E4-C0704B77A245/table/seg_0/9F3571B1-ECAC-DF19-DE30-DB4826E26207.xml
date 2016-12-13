@@ -1,0 +1,123 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9F3571B1-ECAC-DF19-DE30-DB4826E26207" name="Orders">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>72396792-8FCC-0253-4A2D-5C97B837E908</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>zamowienie</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Time" id="499AABEE-6C94-25EF-21C4-2D72408142C6">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>36FA253D-2543-D91D-3F75-F7B05553C936</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_Godzina</notNullConstraintName>
+</Column>
+<Column name="Table_Number" id="97764E56-6CF4-E33D-DF85-F9665154953F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>C91611F7-BC32-3708-4751-D3DB46BED5CA</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_Stolik_Numer</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="F580731B-FDCB-BB17-9907-6E80B0ECB5D2" referredColumn="1A4CF16D-D4D3-679A-33B2-4293742CB07E"/>
+</associations>
+</Column>
+<Column name="Employee_ID" id="C48FB079-859C-0444-BBC1-405A91251436">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>03644B8D-0382-998A-CD8C-8A2062EE8D60</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_Pracownik_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="9250EB3F-3E6A-F750-C352-73AD3B5B3688" referredColumn="825A0853-ED84-F3CE-30F7-3556A0751F62"/>
+</associations>
+</Column>
+<Column name="Payment_method_Name" id="BC3B23DC-EC67-C062-28E8-74A645B67FD4">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>7B540B99-BDC4-A1C7-6D2A-DC426225D763</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zamowienia_Metoda_platnosci_Nazwa</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="F867D19C-FE84-8FEA-AC03-FA9068B535DE" referredColumn="4EB55F8B-00A8-1A5E-648E-F70A73000093"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A151E559-BBF5-47D8-E2D9-CF2D0C8E7585" name="Orders_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>FBBB396F-1A0B-4F46-41B3-455E3F50AAE5</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="499AABEE-6C94-25EF-21C4-2D72408142C6"/>
+<colUsage columnID="97764E56-6CF4-E33D-DF85-F9665154953F"/>
+<colUsage columnID="C48FB079-859C-0444-BBC1-405A91251436"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BEDC8990-166D-1EAD-7D85-BF0567C3D06A" name="Orders_Payment_methods_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>BA3BE2C3-FE03-A00D-D2B4-96881058EA84</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BC3B23DC-EC67-C062-28E8-74A645B67FD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="134358A1-C601-9360-A6B4-6BEA5CB0B9F7" name="Orders_Stoliki_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>E2E705CE-A37E-E119-C847-8342A6E6C238</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="97764E56-6CF4-E33D-DF85-F9665154953F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8B2F43E4-722D-78DD-E718-EC76BF03426C" name="Orders_Employees_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>7F76BA3B-22BC-3B05-2669-E74C690A0654</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C48FB079-859C-0444-BBC1-405A91251436"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
