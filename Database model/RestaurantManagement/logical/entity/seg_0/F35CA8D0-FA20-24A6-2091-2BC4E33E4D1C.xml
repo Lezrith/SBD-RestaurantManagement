@@ -3,6 +3,9 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 16:21:19 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +19,9 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 16:21:25 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT008</logicalDatatype>
@@ -26,10 +32,26 @@
 <createdTime>2016-11-11 16:25:34 UTC</createdTime>
 <generatorID>4E977601-5354-80AF-82A1-E0408E0750EA</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+</engineerTo>
 <referedAttribute>6A695403-F8DC-DE43-2DCF-59325B6E95ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Koszt" id="A1614A17-4188-24F9-C656-18D1469A2E0C">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 11:59:15 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -38,6 +60,9 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 16:22:46 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>A6D9D415-3BA3-0220-93B7-13BE70235B6E</attributeRef>

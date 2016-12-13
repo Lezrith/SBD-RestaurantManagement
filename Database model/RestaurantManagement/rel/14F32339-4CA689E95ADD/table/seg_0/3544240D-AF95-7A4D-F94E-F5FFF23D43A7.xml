@@ -38,6 +38,18 @@
 <colAssociation fkAssociation="DF8791E0-5385-8E66-6CB5-9F673F0937D5" referredColumn="75579E2B-F026-5D5A-054F-9FA24727D27B"/>
 </associations>
 </Column>
+<Column name="Koszt" id="5DD9968C-FFDC-E07E-1F52-B9A03FBDA106">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:00:07 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="AF666796-1766-A28A-98E2-AE20B68F2198" name="Dostawy_PK">
