@@ -7,5 +7,7 @@
         xmlns:local="clr-namespace:RestaurantManagement"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid />
+    <Grid>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="179,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
+    </Grid>
 </Controls:MetroWindow>
