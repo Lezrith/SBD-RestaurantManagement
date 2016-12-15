@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="8830388A-812B-616F-DB64-80E18AF82E6F" containerWithKeyObject="59A42E09-07C0-272D-1F63-D72DC58A1B7F" localFKIndex="B6B77C94-C7E8-1D9C-39C5-B0B59E1F3387" name="Dostawcy_Adresy_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="0E661E5B-9A6A-0A68-50DD-82805CCDC268" containerWithKeyObject="59A42E09-07C0-272D-1F63-D72DC58A1B7F" localFKIndex="8BE5F6F6-A31B-067A-FC5E-6C996BE9293B" name="Dostawcy_Adres_FK">
 <createdBy>Krzysiu</createdBy>
-<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<createdTime>2016-12-15 19:36:34 UTC</createdTime>
 <generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <deleteRule>NO ACTION</deleteRule>

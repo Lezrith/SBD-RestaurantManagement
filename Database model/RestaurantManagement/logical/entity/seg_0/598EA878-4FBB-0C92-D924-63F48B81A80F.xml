@@ -3,6 +3,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:29:25 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
 <fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
@@ -16,6 +20,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:49:45 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT057</logicalDatatype>
@@ -25,6 +33,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:29:30 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
@@ -35,6 +47,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:29:49 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -44,6 +60,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:30:02 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -54,6 +74,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:30:11 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -64,6 +88,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:30:33 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -75,6 +103,10 @@
 <createdTime>2016-11-11 15:50:16 UTC</createdTime>
 <generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <referedAttribute>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -86,11 +118,16 @@
 <createdTime>2016-11-11 16:25:34 UTC</createdTime>
 <generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <referedAttribute>6A695403-F8DC-DE43-2DCF-59325B6E95ED</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT037</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
@@ -98,6 +135,10 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-11 15:49:55 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
 <pk>true</pk>
 <usedAttributes>
 <attributeRef>A3026742-993F-88E7-F260-4D81A8153ED3</attributeRef>

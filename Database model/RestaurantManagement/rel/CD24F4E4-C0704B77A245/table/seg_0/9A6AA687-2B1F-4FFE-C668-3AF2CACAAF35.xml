@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9A6AA687-2B1F-4FFE-C668-3AF2CACAAF35" name="Dish_Type">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>relation_29</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Dish_ID" id="EE23CDF3-B067-44B2-0DAE-1CD1AAA6C154">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E654F7B0-16C1-B822-B273-01BB954048A7" referredColumn="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
+</associations>
+</Column>
+<Column name="Type_Name" id="2F484244-26C0-C6DF-04A7-BD827CAA3692">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F9280426-1063-5A1F-0C65-D64091742082" referredColumn="D6A68226-BF5B-D97F-2F22-73DB4995DD89"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="310D9AA1-5DE8-CCBC-C368-52DFB75F182F" name="Dish_Type_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE23CDF3-B067-44B2-0DAE-1CD1AAA6C154"/>
+<colUsage columnID="2F484244-26C0-C6DF-04A7-BD827CAA3692"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8C1DBEEF-210F-8A51-F129-A42F0B49C614" name="Dish_Type_Dishes_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<generatorID>54F1EDCC-C2CE-9AC1-DDB4-C79901D25D89</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EE23CDF3-B067-44B2-0DAE-1CD1AAA6C154"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C1CE855E-1059-A8EC-ADC5-061FF6128596" name="Dish_Type_Types_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<generatorID>54F1EDCC-C2CE-9AC1-DDB4-C79901D25D89</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2F484244-26C0-C6DF-04A7-BD827CAA3692"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

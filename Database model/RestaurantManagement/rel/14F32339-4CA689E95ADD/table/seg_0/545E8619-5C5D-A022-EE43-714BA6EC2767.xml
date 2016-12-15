@@ -87,7 +87,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Pracownicy_Telefon</notNullConstraintName>
 </Column>
-<Column name="Adres ID" id="ED58EF3B-7C36-D836-9AFC-78AB3F62DDA1">
+<Column name="ID1" id="ED58EF3B-7C36-D836-9AFC-78AB3F62DDA1">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>09C7DD0D-D019-CD43-146A-F1ABB5C32051</generatorID>
@@ -100,7 +100,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Pracownicy_Adres_ID</notNullConstraintName>
 <associations>
-<colAssociation fkAssociation="254E4366-443E-2D5D-512A-482D0D04B87A" referredColumn="9227D751-8499-A12F-D998-6E56BDB0FAEC"/>
+<colAssociation fkAssociation="63B9DCA0-AC3A-81DB-8A31-765FAD9F3EAA" referredColumn="9227D751-8499-A12F-D998-6E56BDB0FAEC"/>
 </associations>
 </Column>
 <Column name="Etaty_Nazwa" id="68D55316-4029-386B-C542-712D93E32014">
@@ -112,7 +112,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Pracownicy_Etaty_Nazwa</notNullConstraintName>
@@ -167,9 +167,9 @@
 <colUsage columnID="68D55316-4029-386B-C542-712D93E32014"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3CFC7C39-20B3-ABF1-8082-19D537FE0917" name="Pracownicy_Adresy_FK">
+<ind_PK_UK id="E6A3BADC-C0ED-BE9E-70D8-D53E101CED06" name="Pracownicy_Adres_FK">
 <createdBy>Krzysiu</createdBy>
-<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<createdTime>2016-12-15 19:36:33 UTC</createdTime>
 <generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <indexState>Foreign Key</indexState>

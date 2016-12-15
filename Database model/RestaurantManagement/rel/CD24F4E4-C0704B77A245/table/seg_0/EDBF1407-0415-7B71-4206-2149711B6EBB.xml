@@ -46,6 +46,17 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Dania_Cena</notNullConstraintName>
 </Column>
+<Column name="In_menu" id="4B699488-CDFA-42C0-3E97-0A109FD5CE99">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:45:31 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="A163B2EF-53F5-C8F2-21FB-AC85CDF6F764" name="Dishes_PK">

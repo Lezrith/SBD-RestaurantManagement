@@ -48,7 +48,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Dostawcy_Telefon</notNullConstraintName>
 </Column>
-<Column name="Adres_ID" id="8A122CFE-9769-3845-2AA0-58FC44CED2FD">
+<Column name="ID" id="8A122CFE-9769-3845-2AA0-58FC44CED2FD">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>466006CC-5265-4F28-8D1A-4F54BBBF31E6</generatorID>
@@ -61,7 +61,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Dostawcy_Adres_ID</notNullConstraintName>
 <associations>
-<colAssociation fkAssociation="8830388A-812B-616F-DB64-80E18AF82E6F" referredColumn="9227D751-8499-A12F-D998-6E56BDB0FAEC"/>
+<colAssociation fkAssociation="0E661E5B-9A6A-0A68-50DD-82805CCDC268" referredColumn="9227D751-8499-A12F-D998-6E56BDB0FAEC"/>
 </associations>
 </Column>
 </columns>
@@ -89,9 +89,9 @@
 <colUsage columnID="8A122CFE-9769-3845-2AA0-58FC44CED2FD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="B6B77C94-C7E8-1D9C-39C5-B0B59E1F3387" name="Dostawcy_Adresy_FK">
+<ind_PK_UK id="8BE5F6F6-A31B-067A-FC5E-6C996BE9293B" name="Dostawcy_Adres_FK">
 <createdBy>Krzysiu</createdBy>
-<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<createdTime>2016-12-15 19:36:34 UTC</createdTime>
 <generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <indexState>Foreign Key</indexState>
