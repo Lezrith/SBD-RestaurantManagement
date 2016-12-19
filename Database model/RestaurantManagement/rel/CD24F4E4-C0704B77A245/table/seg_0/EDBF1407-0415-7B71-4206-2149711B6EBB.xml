@@ -71,5 +71,14 @@
 <colUsage columnID="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="6B768992-B2E1-6E8A-6DD3-0ACDA806D6E0" name="Dishes_Name_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-19 15:27:04 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF2507AB-2486-E0A0-4C50-2BE9048EFB63"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>

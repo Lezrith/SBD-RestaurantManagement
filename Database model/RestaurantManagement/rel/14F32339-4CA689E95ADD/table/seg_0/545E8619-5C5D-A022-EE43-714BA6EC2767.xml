@@ -87,7 +87,7 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Pracownicy_Telefon</notNullConstraintName>
 </Column>
-<Column name="ID1" id="ED58EF3B-7C36-D836-9AFC-78AB3F62DDA1">
+<Column name="Adres_ID" id="ED58EF3B-7C36-D836-9AFC-78AB3F62DDA1">
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-11-22 17:17:00 UTC</createdTime>
 <generatorID>09C7DD0D-D019-CD43-146A-F1ABB5C32051</generatorID>
@@ -112,7 +112,7 @@
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30</dataTypeSize>
-<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <notNullConstraintName>NNC_Pracownicy_Etaty_Nazwa</notNullConstraintName>

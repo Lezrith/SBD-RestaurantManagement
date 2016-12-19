@@ -72,5 +72,14 @@
 <colUsage columnID="11A27C48-79CB-6F6D-9CBA-A3AF33956D08"/>
 </indexColumnUsage>
 </ind_PK_UK>
+<ind_PK_UK id="C611C7D7-CA20-4027-67A5-33A5AAFC97A6" name="Dania_Nazwa_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-19 15:23:42 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="22FB1C27-5656-FC4E-0569-8160D4A30496"/>
+</indexColumnUsage>
+</ind_PK_UK>
 </indexes>
 </Table>
