@@ -38,6 +38,7 @@ namespace RestaurantManagement
             {
                 //try to login user
             }
+            else warningLabel.Content = "Uzupełnij puste pola.";
         }
 
         private void usernameTextBox_GotFocus(object sender, RoutedEventArgs e)

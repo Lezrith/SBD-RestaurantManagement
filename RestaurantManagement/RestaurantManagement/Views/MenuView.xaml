@@ -1,0 +1,79 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:local="clr-namespace:RestaurantManagement.Views"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="RestaurantManagement.Views.MenuView"
+      mc:Ignorable="d"
+      d:DesignHeight="300" d:DesignWidth="300"
+      Title="MenuView" Height="Auto" Width="Auto" MinWidth="800" MinHeight="600">
+    <Page.Resources>
+        <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
+        <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource {x:Type PasswordBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="FontSize" Value="26" />
+        </Style>
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Background" Value="{StaticResource LazurBlue}" />
+        </Style>
+        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource {x:Type DataGrid}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+    </Page.Resources>
+    <Grid Background="#FFE5E5E5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" MaxHeight="39" />
+            <RowDefinition Height="14*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="58*" MaxWidth="58" />
+            <ColumnDefinition Width="20*" MaxWidth="20" />
+            <ColumnDefinition Width="193*" MaxWidth="200" />
+            <ColumnDefinition Width="370*" />
+            <ColumnDefinition Width="130*" MaxWidth="130" MinWidth="130" />
+        </Grid.ColumnDefinitions>
+        <Button x:Name="searchButton" Content="Szukaj" HorizontalAlignment="Right" Margin="0,5,0,3" VerticalAlignment="Center" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="3" HorizontalContentAlignment="Stretch" Height="31" />
+        <DataGrid x:Name="menuDataGrid" Margin="0" Grid.Row="1" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" AutoGenerateColumns="False" GridLinesVisibility="All" SelectionMode="Single" IsTextSearchEnabled="True" Grid.ColumnSpan="4">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Numer" MinWidth="58" IsReadOnly="True" MaxWidth="58" />
+                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" IsReadOnly="False" />
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nazwa" IsReadOnly="True" MinWidth="200" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="filterBynumberTextBox" Margin="0,5,0,4" TextWrapping="Wrap" VerticalAlignment="Center" MaxLength="4" Height="30" />
+        <Button x:Name="addButton" Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="4" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" />
+        <Button x:Name="editButton" Content="Edytuj" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="4" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" />
+        <Button x:Name="deleteButton" Content="Usuń" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="4" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" />
+        <TextBox x:Name="fliterByNameTextBox" Margin="0,4,0,5" TextWrapping="Wrap" VerticalAlignment="Center" MaxLength="4" Height="30" Grid.Column="2" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-0.352" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <ComboBox x:Name="comboBox" Grid.Column="3" HorizontalAlignment="Left" Margin="0,4,0,5" VerticalAlignment="Center" Height="30" SelectedIndex="0" Width="120">
+            <ComboBoxItem Content="Wszystkie dania" />
+            <ComboBoxItem Content="Tylko dania w menu" />
+            <ComboBoxItem Content="Tylko dania poza menu" />
+        </ComboBox>
+        <Button x:Name="deleteButton_Copy" Content="Dodaj do menu" HorizontalAlignment="Left" Margin="0,108,0,0" VerticalAlignment="Top" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="4" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" />
+    </Grid>
+</Page>
