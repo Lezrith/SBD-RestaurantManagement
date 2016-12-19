@@ -1,0 +1,177 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B84D50A7-4750-0198-DCD8-AB4F68627F6E" name="Addreses">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>598EA878-4FBB-0C92-D924-63F48B81A80F</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>adres</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="E45FDBE4-2870-8B49-9C91-3A93B057C088">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>A3026742-993F-88E7-F260-4D81A8153ED3</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Adresy_ID</notNullConstraintName>
+</Column>
+<Column name="Street" id="2556222E-17CF-5085-E845-DF50FF4B5FA6">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>1502E2BA-F4F3-CF83-CABA-7DF8800DE8D7</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Adresy_Ulica</notNullConstraintName>
+</Column>
+<Column name="Number" id="92CF1DC3-6F07-12B4-B758-78C8C78EA977">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>4CE4C8CA-12B9-A17A-6C0C-B66B7AB4B569</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Adresy_Numer</notNullConstraintName>
+</Column>
+<Column name="Flat_number" id="A25E5CA8-8B3A-927E-69F6-6D7D22B570F3">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>CA826636-C2D2-B211-7028-7A20E79418CE</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PostalCode" id="1FD839D5-C09D-9F1C-FCD4-1FB0A03D4A23">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>80C6D425-D04B-9135-648A-A5CFBEF8FC4E</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Adresy_Kod_pocztowy</notNullConstraintName>
+</Column>
+<Column name="City" id="FB53153D-B34D-0F20-A36A-66DEB29090CB">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>1AB6A188-EC34-9529-5111-2DB9FB4FDFF1</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Adresy_Miasto</notNullConstraintName>
+</Column>
+<Column name="Employee_ID" id="4F6A9721-F084-27DF-25DE-07E284E3555C">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>94928CD0-1CCA-7394-B086-01865155EBDA</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF80E673-D4E4-F710-A611-84D8F1C5E21D" referredColumn="825A0853-ED84-F3CE-30F7-3556A0751F62"/>
+</associations>
+</Column>
+<Column name="Supplier_Name" id="1EE912D5-DFC0-9C07-CF39-A8F39CEBE134">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>0D8ECDF8-97D8-F950-1A4A-94DE5D823A72</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AF0DA4BC-0EE2-57C4-0DB6-E0714695718A" referredColumn="D42AA8F0-CFE6-B5C7-23CF-503624F9240F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F02A3ADA-D686-195C-215B-762ED8BA2FB1" name="Addresses_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>B83D8F43-B23F-79AD-79B7-299007A16D99</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E45FDBE4-2870-8B49-9C91-3A93B057C088"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DD8A0C45-3CB4-D573-9B60-D5E0520C9D83" name="Addresses_Employee_ID_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F6A9721-F084-27DF-25DE-07E284E3555C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="058CF5D6-0863-8290-02B4-C82DB3CB2112" name="Addresses_Supplier_Name_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EE912D5-DFC0-9C07-CF39-A8F39CEBE134"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7EFC92A4-B747-D6A5-CC30-1BDC2A7C1927" name="Addresses_Employees_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F6A9721-F084-27DF-25DE-07E284E3555C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35B99162-05B0-0F80-F638-6B52C523B0C1" name="Addresses_Suppliers_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EE912D5-DFC0-9C07-CF39-A8F39CEBE134"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

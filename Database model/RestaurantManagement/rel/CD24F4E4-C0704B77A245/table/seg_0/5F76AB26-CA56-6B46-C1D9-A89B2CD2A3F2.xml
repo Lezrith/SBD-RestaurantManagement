@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F76AB26-CA56-6B46-C1D9-A89B2CD2A3F2" name="Positions">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>DD775752-97B5-0F01-1B38-CCB7804EB58E</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>etat</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Name" id="96070B03-1B61-9034-95B9-71298AB2E43A">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>CBB9DA59-3E1D-9DD1-EE69-957711D32A12</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Starting_salary" id="102B5155-B6DF-51A1-6BC1-74F311749749">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>D1B6EA26-3468-6BAD-5FC7-820126D56F73</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A5E01D4-A1A3-98C0-935B-25D8B4586BAA" name="Positions_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>CBB85F28-9CBD-BA67-B47A-F6A10D59FF66</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="96070B03-1B61-9034-95B9-71298AB2E43A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

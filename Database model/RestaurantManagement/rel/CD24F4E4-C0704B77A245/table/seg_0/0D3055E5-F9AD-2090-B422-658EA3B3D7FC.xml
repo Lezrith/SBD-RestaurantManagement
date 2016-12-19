@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0D3055E5-F9AD-2090-B422-658EA3B3D7FC" name="Employees">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>210AC7FE-620A-D85D-ACB2-9038E2456E98</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>pracownik</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="825A0853-ED84-F3CE-30F7-3556A0751F62">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_ID</notNullConstraintName>
+</Column>
+<Column name="Last_name" id="FC7D2DF4-179C-8A11-E752-08807050597C">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>777EFCDC-B076-2A40-BD19-E16FD0CD97A2</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Nazwisko</notNullConstraintName>
+</Column>
+<Column name="First_name" id="542AC284-85CA-5C21-74AC-0795E82C7152">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>A6D51441-71B1-C5A3-2207-2F32EF123C47</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Imie</notNullConstraintName>
+</Column>
+<Column name="Salary" id="F0D26270-0004-B265-204B-F9515BB79B16">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>11F78F16-F0BF-52E4-3D5D-F03FA995BCD4</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Placa</notNullConstraintName>
+</Column>
+<Column name="Email_address" id="94C7A122-2003-B99D-5198-447D86D62B2D">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>8949FF8A-35F9-96D0-5BAB-0252BC8FC2F3</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Adres_email</notNullConstraintName>
+</Column>
+<Column name="Phone_number" id="5C308673-D616-C3DA-8D8F-D19EAD9807C5">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>EBFF8706-73CC-6F0A-7738-C168563EDA14</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Telefon</notNullConstraintName>
+</Column>
+<Column name="Address_ID" id="9CF4FAA7-36BD-F45D-A3F7-D58D90D47B82">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>09C7DD0D-D019-CD43-146A-F1ABB5C32051</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Adres_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="B6F449D5-C4C6-BF04-933D-54A0540734F9" referredColumn="E45FDBE4-2870-8B49-9C91-3A93B057C088"/>
+</associations>
+</Column>
+<Column name="Position_Name" id="4AFED5A0-ADC5-BF74-288C-1D8078D37DF2">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>22BA8BC9-6999-512F-5FFC-E73A74646DCE</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Pracownicy_Etaty_Nazwa</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="08BF513C-C8E0-0D52-E51E-D6EAAC7154FA" referredColumn="96070B03-1B61-9034-95B9-71298AB2E43A"/>
+</associations>
+</Column>
+<Column name="Hashed_password" id="733C64C3-C761-EB80-D259-309E316AABF1">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:57:59 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="413CA3FD-C009-CC12-01CF-E8D40DB2CF43" name="Employees_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>E10B8BC5-BB74-08BA-1313-289C5F5C6B56</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="825A0853-ED84-F3CE-30F7-3556A0751F62"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10175412-F734-6A3F-4EB9-9D0EC0835B98" name="Employees_Address_ID_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CF4FAA7-36BD-F45D-A3F7-D58D90D47B82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7F37C8CD-E534-4675-7707-E0257CB2A8BD" name="Employees_Addresses_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9CF4FAA7-36BD-F45D-A3F7-D58D90D47B82"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="15BDC49E-0B4F-7C3B-EE7B-E3DCB7E11A69" name="Employees_Positions_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>A199D7C5-84D3-4D35-3F5F-222593548806</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4AFED5A0-ADC5-BF74-288C-1D8078D37DF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

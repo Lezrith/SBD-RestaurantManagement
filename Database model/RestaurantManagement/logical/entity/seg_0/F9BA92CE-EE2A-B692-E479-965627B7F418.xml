@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F9BA92CE-EE2A-B692-E479-965627B7F418" name="Metoda_platnosci">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:34:25 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nazwa" id="E8D15E06-4093-F214-BB0F-7D6A74CA55B7">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:34:33 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F7E207AB-AC47-4AF7-C7C6-6C3C73685720" name="Metoda_platnosci PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 17:34:34 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E8D15E06-4093-F214-BB0F-7D6A74CA55B7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

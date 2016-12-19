@@ -1,0 +1,162 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="210AC7FE-620A-D85D-ACB2-9038E2456E98" name="Pracownik">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:36:04 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="B5C07B3F-CA41-0742-34E7-7C27F430C2F9">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:36:09 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwisko" id="777EFCDC-B076-2A40-BD19-E16FD0CD97A2">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:36:37 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Imie" id="A6D51441-71B1-C5A3-2207-2F32EF123C47">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:37:31 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Placa" id="11F78F16-F0BF-52E4-3D5D-F03FA995BCD4">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:37:37 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Adres_email" id="8949FF8A-35F9-96D0-5BAB-0252BC8FC2F3">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:39:05 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefon" id="EBFF8706-73CC-6F0A-7738-C168563EDA14">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:39:16 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID1" id="09C7DD0D-D019-CD43-146A-F1ABB5C32051">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:50:29 UTC</createdTime>
+<generatorID>0A7D526B-72A6-C536-F802-3311976E7445</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<referedAttribute>A3026742-993F-88E7-F260-4D81A8153ED3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwa" id="22BA8BC9-6999-512F-5FFC-E73A74646DCE">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-21 18:21:05 UTC</createdTime>
+<generatorID>A199D7C5-84D3-4D35-3F5F-222593548806</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<referedAttribute>CBB9DA59-3E1D-9DD1-EE69-957711D32A12</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Haslo" id="A9AF76A3-6D98-F949-5C14-E7281B683E31">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:58:38 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E10B8BC5-BB74-08BA-1313-289C5F5C6B56" name="Pracownik PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:36:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="false"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B5C07B3F-CA41-0742-34E7-7C27F430C2F9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

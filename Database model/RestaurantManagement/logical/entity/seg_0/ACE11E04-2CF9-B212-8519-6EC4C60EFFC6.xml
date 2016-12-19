@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ACE11E04-2CF9-B212-8519-6EC4C60EFFC6" name="Rodzaj_dania">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:19:23 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<preferredAbbreviation>Radzaje_dan</preferredAbbreviation>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Nazwa" id="65016CDD-ACD4-8D7B-E3BC-1544734F059F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:20:48 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="459CD4C5-8F8F-1D25-9FD9-F4843DF7D5D1" name="Rodzaj_dania PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:21:29 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<engineerTo>
+<item key="14F32339-C681-3331-F015-4CA689E95ADD" value="true"/>
+<item key="CD24F4E4-826A-6380-4F70-C0704B77A245" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>65016CDD-ACD4-8D7B-E3BC-1544734F059F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

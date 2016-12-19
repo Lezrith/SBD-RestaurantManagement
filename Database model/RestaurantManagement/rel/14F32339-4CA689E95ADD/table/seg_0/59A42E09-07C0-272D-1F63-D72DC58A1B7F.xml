@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="59A42E09-07C0-272D-1F63-D72DC58A1B7F" name="Dostawcy">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>1991F1B2-4136-C6D5-21BA-A52C3A21A856</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>dostawca</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nazwa" id="75579E2B-F026-5D5A-054F-9FA24727D27B">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>6A695403-F8DC-DE43-2DCF-59325B6E95ED</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Nazwa</notNullConstraintName>
+</Column>
+<Column name="Adres_email" id="5D17EE1E-F321-6049-68B0-021F30BA9E86">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>94B17128-D6E9-B8B5-3D8F-DC0F7B4DC858</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Adres_email</notNullConstraintName>
+</Column>
+<Column name="Telefon" id="E9C53D4C-2859-0FD2-DA86-2443F276937F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>467AA298-74AE-0675-4EE8-8682D5B83EF0</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>9</dataTypeSize>
+<ownDataTypeParameters>9,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Telefon</notNullConstraintName>
+</Column>
+<Column name="ID" id="8A122CFE-9769-3845-2AA0-58FC44CED2FD">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>466006CC-5265-4F28-8D1A-4F54BBBF31E6</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawcy_Adres_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="0E661E5B-9A6A-0A68-50DD-82805CCDC268" referredColumn="9227D751-8499-A12F-D998-6E56BDB0FAEC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB7E8A7E-5A8D-8716-1E34-D8D10E1A81AF" name="Dostawcy_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<generatorID>764420AC-C984-3A89-A77A-5E322CA9A1E1</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="75579E2B-F026-5D5A-054F-9FA24727D27B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="031A0163-8538-BD9F-3589-2D94EB823AB9" name="Dostawcy_Adres_ID_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-22 17:17:00 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="8A122CFE-9769-3845-2AA0-58FC44CED2FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="8BE5F6F6-A31B-067A-FC5E-6C996BE9293B" name="Dostawcy_Adres_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:36:34 UTC</createdTime>
+<generatorID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A122CFE-9769-3845-2AA0-58FC44CED2FD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

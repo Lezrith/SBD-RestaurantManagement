@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4BC5B548-1081-D5DF-0DA1-7DF38BE68988" name="Dishes_contents">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>E03A7388-4AA9-0A9C-109C-629D3B298108</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>zawartosc_dania</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Quantity" id="D22E2370-BFCA-99C0-75FC-943A9C8CF989">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>4061B2EC-F1CA-DAF9-5ADC-52B6E39AB833</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zawartosci_dan_Ilosc</notNullConstraintName>
+</Column>
+<Column name="Ingredient_Name" id="88BBC912-887A-B73B-F0AA-D16252781281">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>25D1B3F5-3D6F-E707-7A74-F8E2A0FB1F4B</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zawartosci_dan_Składnik_Nazwa</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="8B656F30-DFB1-C5E6-9271-245C65EF9549" referredColumn="7BAF7CC7-8530-561C-3C5F-34F7605B3456"/>
+</associations>
+</Column>
+<Column name="Dish_ID" id="ED466D90-2DEF-4AC6-0A71-50D0672BF78F">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>88506BC2-1FD5-B1C6-2E58-FABE8330ADB8</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Zawartosci_dan_Danie_ID</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="E558C524-EF5F-B8AF-2413-CA30BF6336D4" referredColumn="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3E042F6C-548E-9FC8-5550-3E4FB9FA7068" name="Dishes_contents_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>1AE28403-98C7-6982-8FDF-5BB46E195274</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88BBC912-887A-B73B-F0AA-D16252781281"/>
+<colUsage columnID="ED466D90-2DEF-4AC6-0A71-50D0672BF78F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31FCE45F-F250-6C96-F454-F5DAD776363E" name="Dishes_contents_Dishes_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>83978E76-AF11-29CF-E4D0-56777AB137D2</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ED466D90-2DEF-4AC6-0A71-50D0672BF78F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="60921ADE-7490-87CC-FDCE-4CB65CF7838F" name="Dishes_contents_Ingredientsi_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>4F8A57A4-9A72-BE4A-5CB4-086FCE68BD15</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88BBC912-887A-B73B-F0AA-D16252781281"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AEDB9DC8-F68C-8C25-B7A5-A78DCEFA1D96" name="Deliveries">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>F35CA8D0-FA20-24A6-2091-2BC4E33E4D1C</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>dostawa</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Date" id="03FE0F77-7A6B-676B-0F1C-F9F926E66A6A">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>A6D9D415-3BA3-0220-93B7-13BE70235B6E</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawy_Data</notNullConstraintName>
+</Column>
+<Column name="Supplier_Name" id="3C3551A6-1F1B-B18D-F122-A9B8458345E6">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>9EB32C99-8DEA-E797-6292-793413B3EEE7</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dostawy_Dostawca_Nazwa</notNullConstraintName>
+<associations>
+<colAssociation fkAssociation="93628F32-5DF2-31DA-6EDF-12AFC68B018F" referredColumn="D42AA8F0-CFE6-B5C7-23CF-503624F9240F"/>
+</associations>
+</Column>
+<Column name="Cost" id="1A64B93F-EBFE-840D-E9C5-F4DFD8892391">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,5,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A4D55A06-4B38-E56D-2BB4-6A2123166F0F" name="Deliveries_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>66E12408-75B6-742B-DAEA-C14F473CD28F</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03FE0F77-7A6B-676B-0F1C-F9F926E66A6A"/>
+<colUsage columnID="3C3551A6-1F1B-B18D-F122-A9B8458345E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D566B2F-6E91-FEDD-9550-5FAFDF160439" name="Deliveries_Suppliers_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>4E977601-5354-80AF-82A1-E0408E0750EA</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C3551A6-1F1B-B18D-F122-A9B8458345E6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

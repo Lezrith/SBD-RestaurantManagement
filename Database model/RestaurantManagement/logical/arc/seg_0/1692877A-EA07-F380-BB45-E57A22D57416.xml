@@ -1,0 +1,11 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Arc class="oracle.dbtools.crest.model.design.logical.Arc" directorySegmentName="seg_0" id="1692877A-EA07-F380-BB45-E57A22D57416" name="Arc_2">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 15:50:32 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<entity>598EA878-4FBB-0C92-D924-63F48B81A80F</entity>
+<relations>
+<relationID>45C5404A-1A56-3A4A-C2AA-CCE28D377B97</relationID>
+<relationID>0A7D526B-72A6-C536-F802-3311976E7445</relationID>
+</relations>
+</Arc>

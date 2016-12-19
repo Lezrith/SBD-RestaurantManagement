@@ -1,0 +1,78 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D1844080-808A-7631-7D7F-904B6286DF9E" name="Having_privileges">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>relation_28</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Privilege_Name" id="A96520A2-8CD9-B5F6-DC09-C22A47D00BDD">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75F0032E-0639-9876-336D-C40E61A3AA5C" referredColumn="EC7A2907-6DAD-5F8C-A90F-19D4DAF904C1"/>
+</associations>
+</Column>
+<Column name="Position_Name" id="596FD7EB-3ED4-8B9D-B27E-77C52CF7BBD8">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A10BFE4A-7B07-2C6A-94AC-6ACE3617032B" referredColumn="96070B03-1B61-9034-95B9-71298AB2E43A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F4CE2DAF-A3F3-12DA-FEF5-83145AC36C1E" name="Having_privileges_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A96520A2-8CD9-B5F6-DC09-C22A47D00BDD"/>
+<colUsage columnID="596FD7EB-3ED4-8B9D-B27E-77C52CF7BBD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1336C594-BDE5-C8BB-AC25-0591691B1507" name="Having_privileges_Privileges_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<generatorID>60467E14-9BB6-610E-05B2-06F3D0A77B29</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A96520A2-8CD9-B5F6-DC09-C22A47D00BDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DEB73552-A2F3-1EA3-87E8-6A633179C1C7" name="Having_privileges_Positions_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:42:56 UTC</createdTime>
+<generatorID>60467E14-9BB6-610E-05B2-06F3D0A77B29</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="596FD7EB-3ED4-8B9D-B27E-77C52CF7BBD8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,38 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A67619C2-3748-E072-7F92-F855DE556E74" name="Radzaje_dan">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<generatorID>ACE11E04-2CF9-B212-8519-6EC4C60EFFC6</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Nazwa" id="57D77318-250B-2E36-E1CA-8A22628EBC5E">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<generatorID>65016CDD-ACD4-8D7B-E3BC-1544734F059F</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="965185A1-3F6A-8F52-0C60-F789321D9ED0" name="Radzaje_dan_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<generatorID>459CD4C5-8F8F-1D25-9FD9-F4843DF7D5D1</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57D77318-250B-2E36-E1CA-8A22628EBC5E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

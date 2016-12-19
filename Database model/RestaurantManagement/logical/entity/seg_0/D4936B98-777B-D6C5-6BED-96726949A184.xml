@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D4936B98-777B-D6C5-6BED-96726949A184" name="Rezerwacja">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:34:56 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Dzień" id="2878100A-BA79-C21D-00E5-8FF9E25BE9E0">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:35:33 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Godzina_rozpoczecia" id="0E2D2F22-9F9B-AEFC-89B3-5FD3B71FB4AE">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:35:02 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Godzina_zakonczenia" id="ABA67E00-9DC4-A8E0-51DE-15DB9AFB1C31">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:35:21 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nazwisko" id="D4B24C98-5269-C282-5455-54AF35FFE23E">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-12 10:35:24 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Numer" id="4A3CF6EC-A5F9-2C47-DF6A-7C5236E7FB3A">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:36:52 UTC</createdTime>
+<generatorID>E798CE55-B106-0107-E1CB-C255791BE4D8</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<referedAttribute>4F228435-8087-52CB-4A1A-7883E21F850B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="445981DE-F2C6-E624-DB96-346AD116BD92" name="Rezerwacja PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-11-11 20:36:16 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2878100A-BA79-C21D-00E5-8FF9E25BE9E0</attributeRef>
+<attributeRef>0E2D2F22-9F9B-AEFC-89B3-5FD3B71FB4AE</attributeRef>
+<attributeRef>4A3CF6EC-A5F9-2C47-DF6A-7C5236E7FB3A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EDBF1407-0415-7B71-4206-2149711B6EBB" name="Dishes">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>6297DC35-3F3B-D7D8-0ABE-668C2300D424</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>danie</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="68469C14-B61D-4B62-A91D-2519E689FCFE">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>A4D23F1A-AA62-F127-793F-4627CF570CD4</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dania_ID</notNullConstraintName>
+</Column>
+<Column name="Name" id="FF2507AB-2486-E0A0-4C50-2BE9048EFB63">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>F1FCB858-5305-95F3-E2AD-C792B75F5305</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dania_Nazwa</notNullConstraintName>
+</Column>
+<Column name="Price" id="8F126B73-9E92-5532-60D5-4FEC220266B9">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>B9315A04-629B-F6AE-3B63-5419A9602239</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dania_Cena</notNullConstraintName>
+</Column>
+<Column name="In_menu" id="4B699488-CDFA-42C0-3E97-0A109FD5CE99">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:45:31 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A163B2EF-53F5-C8F2-21FB-AC85CDF6F764" name="Dishes_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-13 12:09:35 UTC</createdTime>
+<generatorID>3142C0FE-6758-B3C6-300A-4682967EF6D7</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6B768992-B2E1-6E8A-6DD3-0ACDA806D6E0" name="Dishes_Name_IDX">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-19 15:27:04 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FF2507AB-2486-E0A0-4C50-2BE9048EFB63"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

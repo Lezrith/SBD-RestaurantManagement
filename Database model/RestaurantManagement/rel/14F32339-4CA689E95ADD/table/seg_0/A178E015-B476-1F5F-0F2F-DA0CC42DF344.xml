@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A178E015-B476-1F5F-0F2F-DA0CC42DF344" name="Dania_Rodzaje">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<ordsAlias>relation_29</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Danie_ID" id="E4CB66B0-A23E-EC15-9116-ADDC22240040">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="841E6ED9-4C72-0931-3A72-83BE0CAEA864" referredColumn="11A27C48-79CB-6F6D-9CBA-A3AF33956D08"/>
+</associations>
+</Column>
+<Column name="Radzaj_dania_Nazwa" id="9DB41E80-0A46-4A2E-13C5-3DA78B671045">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="704F399E-272B-7B63-6F49-0212BC7FC90E" referredColumn="57D77318-250B-2E36-E1CA-8A22628EBC5E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="727DCC1B-4B5A-0F05-0C40-5A43A113F080" name="Dania_Rodzaje_PK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4CB66B0-A23E-EC15-9116-ADDC22240040"/>
+<colUsage columnID="9DB41E80-0A46-4A2E-13C5-3DA78B671045"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DFE9A322-4C13-CE05-D36B-25A2523AFF97" name="Dania_Rodzaje_Dania_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<generatorID>54F1EDCC-C2CE-9AC1-DDB4-C79901D25D89</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4CB66B0-A23E-EC15-9116-ADDC22240040"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80AACA06-43F6-221D-33D9-D848C58B8918" name="Dania_Rodzaje_Radzaje_dan_FK">
+<createdBy>Krzysiu</createdBy>
+<createdTime>2016-12-15 19:29:58 UTC</createdTime>
+<generatorID>54F1EDCC-C2CE-9AC1-DDB4-C79901D25D89</generatorID>
+<ownerDesignName>RestaurantManagement</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9DB41E80-0A46-4A2E-13C5-3DA78B671045"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
