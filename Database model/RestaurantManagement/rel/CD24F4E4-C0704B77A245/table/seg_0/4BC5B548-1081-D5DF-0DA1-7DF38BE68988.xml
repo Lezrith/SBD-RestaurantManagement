@@ -19,7 +19,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zawartosci_dan_Ilosc</notNullConstraintName>
+<notNullConstraintName>NNC_Dishes_contents_Quantity</notNullConstraintName>
 </Column>
 <Column name="Ingredient_Name" id="88BBC912-887A-B73B-F0AA-D16252781281">
 <createdBy>Krzysiu</createdBy>
@@ -33,7 +33,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zawartosci_dan_Składnik_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Dishes_contents_Ingredient_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="8B656F30-DFB1-C5E6-9271-245C65EF9549" referredColumn="7BAF7CC7-8530-561C-3C5F-34F7605B3456"/>
 </associations>
@@ -45,11 +45,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zawartosci_dan_Danie_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Dishes_contents_Dish_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="E558C524-EF5F-B8AF-2413-CA30BF6336D4" referredColumn="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
 </associations>

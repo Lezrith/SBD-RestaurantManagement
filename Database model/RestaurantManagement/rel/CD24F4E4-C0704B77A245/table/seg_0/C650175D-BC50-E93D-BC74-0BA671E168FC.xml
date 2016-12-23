@@ -20,7 +20,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawcy_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Suppliers_Name</notNullConstraintName>
 </Column>
 <Column name="Email_address" id="AB1AED11-4EF5-3CAD-EF8F-03F58F37C6FF">
 <createdBy>Krzysiu</createdBy>
@@ -33,7 +33,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawcy_Adres_email</notNullConstraintName>
+<notNullConstraintName>NNC_Suppliers_Email_address</notNullConstraintName>
 </Column>
 <Column name="Phone_number" id="8923B005-B221-CD15-A19C-B4D007E3EE62">
 <createdBy>Krzysiu</createdBy>
@@ -46,7 +46,7 @@
 <dataTypeSize>9</dataTypeSize>
 <ownDataTypeParameters>9,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawcy_Telefon</notNullConstraintName>
+<notNullConstraintName>NNC_Suppliers_Phone_number</notNullConstraintName>
 </Column>
 <Column name="Address_ID" id="1746A584-616E-CAC6-CF04-22DCBB7B518C">
 <createdBy>Krzysiu</createdBy>
@@ -55,11 +55,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawcy_Adres_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Suppliers_Address_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="B9FDF7BD-9DD5-9C86-72ED-9A217AE4BC70" referredColumn="E45FDBE4-2870-8B49-9C91-3A93B057C088"/>
 </associations>

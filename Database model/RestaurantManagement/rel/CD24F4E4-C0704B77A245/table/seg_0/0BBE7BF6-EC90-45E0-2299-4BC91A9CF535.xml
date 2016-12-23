@@ -19,7 +19,7 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Rezerwacje_Dzień</notNullConstraintName>
+<notNullConstraintName>NNC_Reservations_Date</notNullConstraintName>
 </Column>
 <Column name="Start" id="69760D0F-9283-B4D7-B5A2-D56BE98C5DB1">
 <createdBy>Krzysiu</createdBy>
@@ -31,7 +31,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Rezerwacje_Godzina_rozpoczecia</notNullConstraintName>
+<notNullConstraintName>NNC_Reservations_Start</notNullConstraintName>
 </Column>
 <Column name="End" id="5C17AE42-0AAA-E5D2-8340-C378AC7A5E13">
 <createdBy>Krzysiu</createdBy>
@@ -43,7 +43,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Rezerwacje_Godzina_zakonczenia</notNullConstraintName>
+<notNullConstraintName>NNC_Reservations_End</notNullConstraintName>
 </Column>
 <Column name="Name" id="B1E9AA28-803E-CFD7-55AB-4730395FAD3E">
 <createdBy>Krzysiu</createdBy>
@@ -56,7 +56,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Rezerwacje_Nazwisko</notNullConstraintName>
+<notNullConstraintName>NNC_Reservations_Name</notNullConstraintName>
 </Column>
 <Column name="Table_Number" id="0DE8DA1E-0179-C247-11E6-87D65F397F70">
 <createdBy>Krzysiu</createdBy>
@@ -69,7 +69,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Rezerwacje_Stolik_Numer</notNullConstraintName>
+<notNullConstraintName>NNC_Reservations_Table_Number</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="7D810026-FE22-4191-A489-0EEF6CBE566D" referredColumn="1A4CF16D-D4D3-679A-33B2-4293742CB07E"/>
 </associations>

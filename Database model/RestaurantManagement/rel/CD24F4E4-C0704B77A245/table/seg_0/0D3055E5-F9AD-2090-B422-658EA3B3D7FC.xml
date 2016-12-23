@@ -16,10 +16,14 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_ID</notNullConstraintName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+<notNullConstraintName>NNC_Employees_ID</notNullConstraintName>
 </Column>
 <Column name="Last_name" id="FC7D2DF4-179C-8A11-E752-08807050597C">
 <createdBy>Krzysiu</createdBy>
@@ -32,7 +36,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Nazwisko</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Last_name</notNullConstraintName>
 </Column>
 <Column name="First_name" id="542AC284-85CA-5C21-74AC-0795E82C7152">
 <createdBy>Krzysiu</createdBy>
@@ -45,7 +49,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Imie</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_First_name</notNullConstraintName>
 </Column>
 <Column name="Salary" id="F0D26270-0004-B265-204B-F9515BB79B16">
 <createdBy>Krzysiu</createdBy>
@@ -59,7 +63,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,5,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Placa</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Salary</notNullConstraintName>
 </Column>
 <Column name="Email_address" id="94C7A122-2003-B99D-5198-447D86D62B2D">
 <createdBy>Krzysiu</createdBy>
@@ -72,7 +76,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Adres_email</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Email_address</notNullConstraintName>
 </Column>
 <Column name="Phone_number" id="5C308673-D616-C3DA-8D8F-D19EAD9807C5">
 <createdBy>Krzysiu</createdBy>
@@ -85,7 +89,7 @@
 <dataTypeSize>9</dataTypeSize>
 <ownDataTypeParameters>9,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Telefon</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Phone_number</notNullConstraintName>
 </Column>
 <Column name="Address_ID" id="9CF4FAA7-36BD-F45D-A3F7-D58D90D47B82">
 <createdBy>Krzysiu</createdBy>
@@ -94,11 +98,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Adres_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Address_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="B6F449D5-C4C6-BF04-933D-54A0540734F9" referredColumn="E45FDBE4-2870-8B49-9C91-3A93B057C088"/>
 </associations>
@@ -115,7 +119,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Pracownicy_Etaty_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Employees_Position_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="08BF513C-C8E0-0D52-E51E-D6EAAC7154FA" referredColumn="96070B03-1B61-9034-95B9-71298AB2E43A"/>
 </associations>
@@ -129,6 +133,7 @@
 <logicalDatatype>LOGDT037</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Employees_Hashed_password</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

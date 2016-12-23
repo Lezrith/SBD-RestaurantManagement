@@ -18,7 +18,10 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
 <notNullConstraintName>NNC_Stoliki_Numer</notNullConstraintName>
 </Column>
 <Column name="Liczba_miejsc" id="7E9F7236-E976-12B2-8444-1C0D49C91C90">

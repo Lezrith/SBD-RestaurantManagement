@@ -19,7 +19,7 @@
 <logicalDatatype>LOGDT008</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawy_Data</notNullConstraintName>
+<notNullConstraintName>NNC_Deliveries_Date</notNullConstraintName>
 </Column>
 <Column name="Supplier_Name" id="3C3551A6-1F1B-B18D-F122-A9B8458345E6">
 <createdBy>Krzysiu</createdBy>
@@ -33,7 +33,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostawy_Dostawca_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Deliveries_Supplier_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="93628F32-5DF2-31DA-6EDF-12AFC68B018F" referredColumn="D42AA8F0-CFE6-B5C7-23CF-503624F9240F"/>
 </associations>
@@ -49,6 +49,7 @@
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,5,2</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Deliveries_Cost</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
