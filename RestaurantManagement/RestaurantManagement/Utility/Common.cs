@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace RestaurantManagement
 {
-    internal static class Utility
+    internal static class Common
     {
         static public bool IsAssemblyDebugBuild()
         {
-            Assembly assembly = Assembly.GetAssembly(typeof(Utility));
+            Assembly assembly = Assembly.GetAssembly(typeof(Common));
             return assembly.GetCustomAttributes(false).OfType<DebuggableAttribute>().Select(da => da.IsJITTrackingEnabled).FirstOrDefault();
         }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -36,6 +37,23 @@ namespace RestaurantManagement.Views
             tests.Add(new Test("hehe", 2));
             tests.Add(new Test("hihi", 3));
             menuDataGrid.ItemsSource = tests;
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            openDishAddEditWindow("Dodaj danie");
+        }
+
+        private void openDishAddEditWindow(string title)
+        {
+            DishAddEditWindow addEditWindow = new DishAddEditWindow();
+            addEditWindow.Title = title;
+            addEditWindow.ShowDialog();
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            openDishAddEditWindow("Edytuj danie");
         }
     }
 

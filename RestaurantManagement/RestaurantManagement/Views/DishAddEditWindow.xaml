@@ -1,0 +1,77 @@
+﻿<Controls:MetroWindow x:Class="RestaurantManagement.Views.DishAddEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:RestaurantManagement.Views"
+        mc:Ignorable="d"
+        Title="DishAddEditWindow" Height="400" Width="300" ResizeMode="NoResize" BorderBrush="Black" BorderThickness="1,0,1,1" UseLayoutRounding="True">
+    <Window.Resources>
+        <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
+        <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource {x:Type PasswordBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="Background" Value="{StaticResource LazurBlue}" />
+        </Style>
+        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource {x:Type DataGrid}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="211*" />
+            <RowDefinition Height="35*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="76*" />
+            <ColumnDefinition Width="177*" />
+            <ColumnDefinition Width="39*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label" Content="Nazwa" HorizontalAlignment="Right" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Height="26" />
+        <TextBox x:Name="nameTextBox" Grid.Column="1" Height="26" Margin="0,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" VerticalContentAlignment="Center" />
+        <Label x:Name="label_Copy" Content="Rodzaj" HorizontalAlignment="Right" Margin="0,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Height="26" />
+        <Label x:Name="label_Copy1" Content="Cena" HorizontalAlignment="Right" Margin="0,72,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Height="26" />
+        <Label x:Name="label_Copy2" Content="Składniki" HorizontalAlignment="Right" Margin="0,103,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" HorizontalContentAlignment="Right" Height="26" />
+        <ComboBox x:Name="typeComboBox" Grid.Column="1" Margin="0,41,0,0" Grid.Row="1" VerticalAlignment="Top" Height="26" />
+        <TextBox x:Name="priceTextBox" Grid.Column="1" Height="26" Margin="0,72,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+        <DataGrid x:Name="ingredientsDataGrid" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" Height="155" HeadersVisibility="None" BorderBrush="#FFCCCCCC" BorderThickness="1" HorizontalScrollBarVisibility="Disabled" CanUserReorderColumns="False" />
+        <Button x:Name="addIngredientButton" Grid.Column="2" Margin="0,103,0,160" Grid.Row="1" Height="26" MaxHeight="32">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Stretch="UniformToFill" Fill="White">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_add}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </StackPanel>
+        </Button>
+        <Button x:Name="deleteIngredientButton" Grid.Column="2" Margin="0,134,0,129" Grid.Row="1" MaxHeight="32" Height="26">
+            <StackPanel Orientation="Horizontal">
+                <Rectangle Fill="White" Stretch="UniformToFill" Height="2" Width="14">
+                    <Rectangle.OpacityMask>
+                        <VisualBrush Stretch="Fill" Visual="{StaticResource appbar_minus}" />
+                    </Rectangle.OpacityMask>
+                </Rectangle>
+            </StackPanel>
+        </Button>
+        <Button x:Name="confirmButton" Content="Zatwierdź" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="25" />
+        <Button x:Name="cancelButton" Content="Anuluj" Grid.Column="1" HorizontalAlignment="Right" Grid.Row="2" VerticalAlignment="Top" Width="75" Height="25" IsCancel="True" />
+        <ComboBox x:Name="addIngredientComboBox" Grid.Column="1" Margin="0,103,40,0" Grid.Row="1" VerticalAlignment="Top" Height="26" />
+        <TextBox x:Name="ingredientQuantityTextBox" Grid.Column="1" Height="23" Margin="137,103,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+    </Grid>
+</Controls:MetroWindow>

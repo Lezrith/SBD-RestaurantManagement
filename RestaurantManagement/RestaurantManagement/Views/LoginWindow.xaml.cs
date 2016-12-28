@@ -25,7 +25,7 @@ namespace RestaurantManagement
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            if (Utility.IsAssemblyDebugBuild()) warningLabel.Content = "Aplikacja w trybie deweloperskim!";
+            if (Common.IsAssemblyDebugBuild()) warningLabel.Content = "Aplikacja w trybie deweloperskim!";
         }
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
