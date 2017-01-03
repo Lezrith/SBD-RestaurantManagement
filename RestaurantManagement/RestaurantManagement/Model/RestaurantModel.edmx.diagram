@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a162e6ec3b754a12a1753b279028d045" Name="Diagram1">
+        <EntityTypeShape EntityType="RestaurantDBModel.Delivery" Width="1.5" PointX="9.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Dish" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Dishes_contents" Width="1.5" PointX="13" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Employee" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Ingredient" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Items_in_deliveries" Width="1.5" PointX="12" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Ordering_dishes" Width="1.5" PointX="10.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Order" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Payment_methods" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Position" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.PRIVILEGE" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Reservation" Width="1.5" PointX="8.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Supplier" Width="1.5" PointX="7.5" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Table" Width="1.5" PointX="6" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Type" Width="1.5" PointX="10.5" PointY="2" IsExpanded="true" />
+        <AssociationConnector Association="RestaurantDBModel.Deliveries_Suppliers_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Items_in_deliveries_Deliveries_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Dishes_contents_Dishes_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Ordering_dishes_Dishes_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Dishes_contents_Ingredientsi_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Employees_Positions_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Orders_Employees_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Items_in_deliveries_Ingredients_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Ordering_dishes_Orders_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Orders_Payment_methods_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Orders_Stoliki_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Reservations_Tables_FK" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Dish_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="RestaurantDBModel.Having_privileges" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RestaurantDBModel.Address" Width="1.5" PointX="6.25" PointY="5" />
+        <AssociationConnector Association="RestaurantDBModel.Addresses_Employees_FK1" />
+        <AssociationConnector Association="RestaurantDBModel.Addresses_Suppliers_FK1" />
+        <AssociationConnector Association="RestaurantDBModel.Employees_Addresses_FK1" />
+        <AssociationConnector Association="RestaurantDBModel.Suppliers_Addresses_FK1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
