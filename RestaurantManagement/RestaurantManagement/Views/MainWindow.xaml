@@ -8,6 +8,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="179,105,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="179,105,0,0" TextWrapping="Wrap" Text="integer" VerticalAlignment="Top" Width="120" PreviewTextInput="textBox_PreviewTextInput" />
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="23" Margin="372,59,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="textBox2" HorizontalAlignment="Left" Height="23" Margin="188,145,0,0" TextWrapping="Wrap" Text="decimal(5,3)" VerticalAlignment="Top" Width="120" PreviewTextInput="textBox2_PreviewTextInput" />
     </Grid>
 </Controls:MetroWindow>
