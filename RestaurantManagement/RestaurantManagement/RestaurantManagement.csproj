@@ -154,9 +154,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>RestaurantDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Scripts\dbo.Having_privileges.data.sql" />
+    <Content Include="Scripts\dbo.Positions.data.sql" />
+    <Content Include="Scripts\dbo.PRIVILEGES.data.sql" />
+    <Content Include="Scripts\dbo.Tables.data.sql" />
+    <Content Include="Scripts\dbo.Types.data.sql" />
     <Content Include="Scripts\Generation.sql" />
     <Content Include="Scripts\Maintain_non_negative_number_of_ingredients.sql" />
-    <Content Include="Scripts\Unique_privilige_per_position.sql" />
+    <Content Include="Scripts\Salary_higher_than_starting.sql" />
+    <Content Include="Scripts\Salary_mismatches.sql" />
     <Content Include="Scripts\Update_ingredients_from_deliveries.sql" />
     <Content Include="Scripts\Update_ingredients_from_orders.sql" />
   </ItemGroup>

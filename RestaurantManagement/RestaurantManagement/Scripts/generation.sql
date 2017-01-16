@@ -13,8 +13,8 @@ CREATE
     Street NVARCHAR (50) NOT NULL ,
                 NUMBER INTEGER NOT NULL ,
     Flat_number INTEGER ,
-    PostalCode  VARCHAR (6) NOT NULL ,
-    City        VARCHAR (30) NOT NULL ,
+    PostalCode  NVARCHAR (6) NOT NULL ,
+    City        NVARCHAR (30) NOT NULL ,
     Employee_ID INTEGER ,
     Supplier_Name NVARCHAR (50)
   )
@@ -151,13 +151,13 @@ CREATE
   TABLE Employees
   (
     ID            INTEGER NOT NULL IDENTITY NOT FOR REPLICATION ,
-    Last_name     VARCHAR (30) NOT NULL ,
-    First_name    VARCHAR (30) NOT NULL ,
+    Last_name     NVARCHAR (30) NOT NULL ,
+    First_name    NVARCHAR (30) NOT NULL ,
     Salary        NUMERIC (5,2) NOT NULL ,
-    Email_address VARCHAR (30) NOT NULL ,
+    Email_address NVARCHAR (30) NOT NULL ,
     Phone_number NVARCHAR (9) NOT NULL ,
     Address_ID    INTEGER NOT NULL ,
-    Position_Name VARCHAR (30) NOT NULL ,
+    Position_Name NVARCHAR (30) NOT NULL ,
     Hashed_password NVARCHAR (20) NOT NULL
   )
   ON "default"
@@ -182,7 +182,7 @@ CREATE
   TABLE Having_privileges
   (
     Privilege_Name NVARCHAR (30) NOT NULL ,
-    Position_Name VARCHAR (30) NOT NULL
+    Position_Name NVARCHAR (30) NOT NULL
   )
   ON "default"
 GO
@@ -296,7 +296,7 @@ GO
 CREATE
   TABLE Positions
   (
-    Name            VARCHAR (30) NOT NULL ,
+    Name            NVARCHAR (30) NOT NULL ,
     Starting_salary INTEGER NOT NULL
   )
   ON "default"
@@ -352,7 +352,7 @@ CREATE
   TABLE Suppliers
   (
     Name NVARCHAR (50) NOT NULL ,
-    Email_address VARCHAR (30) NOT NULL ,
+    Email_address NVARCHAR (30) NOT NULL ,
     Phone_number NVARCHAR (9) NOT NULL ,
     Address_ID INTEGER NOT NULL
   )
