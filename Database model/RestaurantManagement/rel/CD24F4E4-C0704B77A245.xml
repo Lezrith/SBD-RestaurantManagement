@@ -3,6 +3,6 @@
 <createdBy>Krzysiu</createdBy>
 <createdTime>2016-12-13 12:09:13 UTC</createdTime>
 <ownerDesignName>RestaurantManagement</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
-<selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<shouldBeOpen>true</shouldBeOpen>
+<selectedRDBMSSite>980FCE9E-D688-BDF0-C89A-C9FB2DCAED45</selectedRDBMSSite>
 </relationalModel>

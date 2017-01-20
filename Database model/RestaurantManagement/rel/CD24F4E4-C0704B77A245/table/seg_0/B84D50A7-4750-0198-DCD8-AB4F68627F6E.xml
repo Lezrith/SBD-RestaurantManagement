@@ -16,10 +16,14 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Adresy_ID</notNullConstraintName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+<notNullConstraintName>NNC_Addreses_ID</notNullConstraintName>
 </Column>
 <Column name="Street" id="2556222E-17CF-5085-E845-DF50FF4B5FA6">
 <createdBy>Krzysiu</createdBy>
@@ -32,7 +36,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Adresy_Ulica</notNullConstraintName>
+<notNullConstraintName>NNC_Addreses_Street</notNullConstraintName>
 </Column>
 <Column name="Number" id="92CF1DC3-6F07-12B4-B758-78C8C78EA977">
 <createdBy>Krzysiu</createdBy>
@@ -44,7 +48,12 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Adresy_Numer</notNullConstraintName>
+<notNullConstraintName>NNC_Addreses_Number</notNullConstraintName>
+<listOfRanges>
+<rangeDef class="oracle.dbtools.crest.model.design.constraint.AVT">
+<beginValue>1</beginValue>
+</rangeDef>
+</listOfRanges>
 </Column>
 <Column name="Flat_number" id="A25E5CA8-8B3A-927E-69F6-6D7D22B570F3">
 <createdBy>Krzysiu</createdBy>
@@ -69,7 +78,7 @@
 <dataTypeSize>6</dataTypeSize>
 <ownDataTypeParameters>6,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Adresy_Kod_pocztowy</notNullConstraintName>
+<notNullConstraintName>NNC_Addreses_PostalCode</notNullConstraintName>
 </Column>
 <Column name="City" id="FB53153D-B34D-0F20-A36A-66DEB29090CB">
 <createdBy>Krzysiu</createdBy>
@@ -82,7 +91,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Adresy_Miasto</notNullConstraintName>
+<notNullConstraintName>NNC_Addreses_City</notNullConstraintName>
 </Column>
 <Column name="Employee_ID" id="4F6A9721-F084-27DF-25DE-07E284E3555C">
 <createdBy>Krzysiu</createdBy>
@@ -92,7 +101,7 @@
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>

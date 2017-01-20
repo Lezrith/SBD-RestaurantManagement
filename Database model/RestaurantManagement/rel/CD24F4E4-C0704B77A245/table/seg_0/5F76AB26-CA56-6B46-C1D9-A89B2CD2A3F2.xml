@@ -20,6 +20,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Positions_Name</notNullConstraintName>
 </Column>
 <Column name="Starting_salary" id="102B5155-B6DF-51A1-6BC1-74F311749749">
 <createdBy>Krzysiu</createdBy>
@@ -31,6 +32,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Positions_Starting_salary</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

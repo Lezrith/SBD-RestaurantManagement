@@ -16,10 +16,14 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementGenerateAlways>true</autoIncrementGenerateAlways>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dania_ID</notNullConstraintName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+<notNullConstraintName>NNC_Dishes_ID</notNullConstraintName>
 </Column>
 <Column name="Name" id="FF2507AB-2486-E0A0-4C50-2BE9048EFB63">
 <createdBy>Krzysiu</createdBy>
@@ -32,7 +36,7 @@
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dania_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Dishes_Name</notNullConstraintName>
 </Column>
 <Column name="Price" id="8F126B73-9E92-5532-60D5-4FEC220266B9">
 <createdBy>Krzysiu</createdBy>
@@ -44,7 +48,7 @@
 <logicalDatatype>LOGDT021</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dania_Cena</notNullConstraintName>
+<notNullConstraintName>NNC_Dishes_Price</notNullConstraintName>
 </Column>
 <Column name="In_menu" id="4B699488-CDFA-42C0-3E97-0A109FD5CE99">
 <createdBy>Krzysiu</createdBy>
@@ -56,6 +60,7 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dishes_In_menu</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

@@ -19,6 +19,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Having_privileges_Privilege_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="75F0032E-0639-9876-336D-C40E61A3AA5C" referredColumn="EC7A2907-6DAD-5F8C-A90F-19D4DAF904C1"/>
 </associations>
@@ -34,6 +35,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Having_privileges_Position_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="A10BFE4A-7B07-2C6A-94AC-6ACE3617032B" referredColumn="96070B03-1B61-9034-95B9-71298AB2E43A"/>
 </associations>

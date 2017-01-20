@@ -20,7 +20,7 @@
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Skladniki_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Ingredients_Name</notNullConstraintName>
 </Column>
 <Column name="Quantity_in_stock" id="52C86A02-B6AC-46D5-38F5-E5C48913AD20">
 <createdBy>Krzysiu</createdBy>
@@ -32,7 +32,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Skladniki_Ilosc_na_stanie</notNullConstraintName>
+<notNullConstraintName>NNC_Ingredients_Quantity_in_stock</notNullConstraintName>
 </Column>
 <Column name="Unit" id="FE2D4D5E-39B1-3A0F-E006-97871774F2C6">
 <createdBy>Krzysiu</createdBy>
@@ -45,7 +45,7 @@
 <dataTypeSize>3</dataTypeSize>
 <ownDataTypeParameters>3,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Skladniki_Jednostka</notNullConstraintName>
+<notNullConstraintName>NNC_Ingredients_Unit</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

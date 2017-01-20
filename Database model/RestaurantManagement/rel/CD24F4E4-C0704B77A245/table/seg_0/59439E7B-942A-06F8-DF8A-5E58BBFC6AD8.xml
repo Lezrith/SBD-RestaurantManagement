@@ -20,7 +20,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Godzina</notNullConstraintName>
+<notNullConstraintName>NNC_Ordering_dishes_Order_Time</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="10722607-5D02-1265-05D5-5745E92D69E3" referredColumn="499AABEE-6C94-25EF-21C4-2D72408142C6"/>
 </associations>
@@ -36,7 +36,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Stolik_Numer</notNullConstraintName>
+<notNullConstraintName>NNC_Ordering_dishes_Table_Number</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="10722607-5D02-1265-05D5-5745E92D69E3" referredColumn="97764E56-6CF4-E33D-DF85-F9665154953F"/>
 </associations>
@@ -48,11 +48,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_dan_Zamowienie_Pracownik_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Ordering_dishes_Employee_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="10722607-5D02-1265-05D5-5745E92D69E3" referredColumn="C48FB079-859C-0444-BBC1-405A91251436"/>
 </associations>
@@ -67,7 +67,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_dan_Ilosc</notNullConstraintName>
+<notNullConstraintName>NNC_Ordering_dishes_Quantity</notNullConstraintName>
 </Column>
 <Column name="Dish_ID" id="03F5B5FD-C06C-B239-8F83-FF4163873819">
 <createdBy>Krzysiu</createdBy>
@@ -76,11 +76,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_dan_Danie_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Ordering_dishes_Dish_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="F93329FA-0088-023B-EC03-6B1D534A7124" referredColumn="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
 </associations>

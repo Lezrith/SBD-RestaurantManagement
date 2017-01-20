@@ -18,8 +18,11 @@
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Stoliki_Numer</notNullConstraintName>
+<autoIncrementGenerateTrigger>false</autoIncrementGenerateTrigger>
+<notNullConstraintName>NNC_Tables_Number</notNullConstraintName>
 </Column>
 <Column name="Number_of_seats" id="8BE337BA-0993-ACFB-8AD3-148BC73BEB20">
 <createdBy>Krzysiu</createdBy>
@@ -31,7 +34,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Stoliki_Liczba_miejsc</notNullConstraintName>
+<notNullConstraintName>NNC_Tables_Number_of_seats</notNullConstraintName>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">

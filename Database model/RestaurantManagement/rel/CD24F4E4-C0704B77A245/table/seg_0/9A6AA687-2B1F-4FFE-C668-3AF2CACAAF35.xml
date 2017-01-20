@@ -14,10 +14,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dish_Type_Dish_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="E654F7B0-16C1-B822-B273-01BB954048A7" referredColumn="68469C14-B61D-4B62-A91D-2519E689FCFE"/>
 </associations>
@@ -33,6 +34,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>NNC_Dish_Type_Type_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="F9280426-1063-5A1F-0C65-D64091742082" referredColumn="D6A68226-BF5B-D97F-2F22-73DB4995DD89"/>
 </associations>
