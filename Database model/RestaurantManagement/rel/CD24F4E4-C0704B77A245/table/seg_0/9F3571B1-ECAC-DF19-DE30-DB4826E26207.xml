@@ -19,7 +19,7 @@
 <logicalDatatype>LOGDT014</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_Godzina</notNullConstraintName>
+<notNullConstraintName>NNC_Orders_Time</notNullConstraintName>
 </Column>
 <Column name="Table_Number" id="97764E56-6CF4-E33D-DF85-F9665154953F">
 <createdBy>Krzysiu</createdBy>
@@ -32,7 +32,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_Stolik_Numer</notNullConstraintName>
+<notNullConstraintName>NNC_Orders_Table_Number</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="F580731B-FDCB-BB17-9907-6E80B0ECB5D2" referredColumn="1A4CF16D-D4D3-679A-33B2-4293742CB07E"/>
 </associations>
@@ -44,11 +44,11 @@
 <ownerDesignName>RestaurantManagement</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT057</logicalDatatype>
+<logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_Pracownik_ID</notNullConstraintName>
+<notNullConstraintName>NNC_Orders_Employee_ID</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="9250EB3F-3E6A-F750-C352-73AD3B5B3688" referredColumn="825A0853-ED84-F3CE-30F7-3556A0751F62"/>
 </associations>
@@ -65,7 +65,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Zamowienia_Metoda_platnosci_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Orders_Payment_method_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="F867D19C-FE84-8FEA-AC03-FA9068B535DE" referredColumn="4EB55F8B-00A8-1A5E-648E-F70A73000093"/>
 </associations>

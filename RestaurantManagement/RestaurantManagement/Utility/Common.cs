@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace RestaurantManagement
@@ -34,6 +35,19 @@ namespace RestaurantManagement
                 }
             }
             return Convert.ToBase64String(hashBytes);
+        }
+
+        private static bool IsInteger(string text)
+        {
+            if (Regex.IsMatch(text, "^0\\d+$")) return false;
+            return Regex.IsMatch(text, "^\\d*$");
+        }
+
+        private static bool IsDecimal(string text, int precision, int scale)
+        {
+            if (Regex.IsMatch(text, "^0\\d+$")) return false;
+            string regex = String.Format("^\\d{{1,{0}}}(,\\d{{0,{1}}})?$", precision - scale, scale);
+            return Regex.IsMatch(text, regex);
         }
     }
 }

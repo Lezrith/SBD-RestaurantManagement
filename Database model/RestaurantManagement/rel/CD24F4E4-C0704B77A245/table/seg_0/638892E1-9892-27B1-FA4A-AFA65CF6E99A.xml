@@ -21,7 +21,7 @@
 <dataTypeScale>3</dataTypeScale>
 <ownDataTypeParameters>,5,3</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostarczenia_Ilosc</notNullConstraintName>
+<notNullConstraintName>NNC_Items_in_deliveries_Quantity</notNullConstraintName>
 </Column>
 <Column name="Delivery_Date" id="7523D251-CD19-BAB1-4E6A-100C9A3BF908">
 <createdBy>Krzysiu</createdBy>
@@ -34,7 +34,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostarczenia_Dostawa_Data</notNullConstraintName>
+<notNullConstraintName>NNC_Items_in_deliveries_Delivery_Date</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="17D98544-1516-BFD5-EA89-44E6B4B48530" referredColumn="03FE0F77-7A6B-676B-0F1C-F9F926E66A6A"/>
 </associations>
@@ -51,7 +51,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostarczenia_Dostawa_Dostawca_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Items_in_deliveries_Supplier_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="17D98544-1516-BFD5-EA89-44E6B4B48530" referredColumn="3C3551A6-1F1B-B18D-F122-A9B8458345E6"/>
 </associations>
@@ -68,7 +68,7 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<notNullConstraintName>NNC_Dostarczenia_Składnik_Nazwa</notNullConstraintName>
+<notNullConstraintName>NNC_Items_in_deliveries_Ingredient_Name</notNullConstraintName>
 <associations>
 <colAssociation fkAssociation="9079289C-86CD-8395-BBB4-1AAC9F414488" referredColumn="7BAF7CC7-8530-561C-3C5F-34F7605B3456"/>
 </associations>
