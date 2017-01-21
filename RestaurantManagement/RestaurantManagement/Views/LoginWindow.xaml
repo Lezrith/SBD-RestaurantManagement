@@ -44,9 +44,9 @@
             <ColumnDefinition Width="121*" />
             <ColumnDefinition Width="30*" />
         </Grid.ColumnDefinitions>
-        <TextBox x:Name="usernameTextBox" Grid.Column="1" Margin="0" Grid.Row="2" TextWrapping="Wrap" MinHeight="0" MaxLines="1" MaxLength="30" Visibility="Visible" VerticalContentAlignment="Center" GotFocus="usernameTextBox_GotFocus">
+        <TextBox x:Name="userIDTextBox" Grid.Column="1" Margin="0" Grid.Row="2" TextWrapping="Wrap" MinHeight="0" MaxLines="1" MaxLength="30" Visibility="Visible" VerticalContentAlignment="Center" GotFocus="usernameTextBox_GotFocus">
             <watermark:WatermarkService.Watermark>
-                <TextBlock VerticalAlignment="Center" FontSize="18" FontFamily="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium">Imię i nazwisko</TextBlock>
+                <TextBlock VerticalAlignment="Center" FontSize="18" FontFamily="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium">Twoje ID</TextBlock>
             </watermark:WatermarkService.Watermark>
         </TextBox>
         <PasswordBox x:Name="passwordBox" Grid.Column="1" Margin="0" Grid.Row="4" MinHeight="0" VerticalContentAlignment="Center" GotFocus="passwordBox_GotFocus" FontFamily="./#Work Sans Medium">
