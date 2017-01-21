@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using RestaurantManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -36,36 +37,44 @@ namespace RestaurantManagement.Views
             tests.Add(new Test("haha", 1));
             tests.Add(new Test("hehe", 2));
             tests.Add(new Test("hihi", 3));
-            menuDataGrid.ItemsSource = tests;
+            dishesDataGrid.ItemsSource = tests;
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            openDishAddEditWindow("Dodaj danie");
+            openDishAddEditWindow("Dodaj danie", null);
         }
 
-        private void openDishAddEditWindow(string title)
+        private void openDishAddEditWindow(string title, Dish dish)
         {
-            DishAddEditWindow addEditWindow = new DishAddEditWindow();
-            addEditWindow.Title = title;
+            var addEditWindow = new DishAddEditWindow(title, null);
             addEditWindow.ShowDialog();
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            openDishAddEditWindow("Edytuj danie");
+            var selectedItems = dishesDataGrid.SelectedItems;
+            if (selectedItems.Count == 1)
+            {
+                openDishAddEditWindow("Edytuj danie", null);
+            }
+        }
+
+        private void searchButton_Click(object sender, RoutedEventArgs e)
+        {
+            filterPopup.IsOpen = !filterPopup.IsOpen;
         }
     }
 
     public class Test
     {
-        public string a { get; set; }
-        public int b { get; set; }
+        public string Types { get; set; }
+        public int ID { get; set; }
 
         public Test(string a, int b)
         {
-            this.a = a;
-            this.b = b;
+            this.Types = a;
+            this.ID = b;
         }
     }
 }
