@@ -49,6 +49,7 @@
         </Grid.RowDefinitions>
         <Button x:Name="addButton" Content="Dodaj" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Margin="7,0,0,0" MinWidth="131" Click="addButton_Click" />
         <Button x:Name="editButton" Content="Edytuj" Margin="7,36,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" MinWidth="131" Click="editButton_Click" />
+        <Button x:Name="deleteButton" Content="Usuń" Margin="7,72,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" />
         <DataGrid ColumnHeaderStyle="{StaticResource {ComponentResourceKey
             TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl},
             ResourceId=DataGridHeaderFilterControlStyle}}" filter:DataGridExtensions.IsClearButtonVisible="False"
