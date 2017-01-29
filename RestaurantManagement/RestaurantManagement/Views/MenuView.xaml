@@ -5,9 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
       xmlns:local="clr-namespace:RestaurantManagement.Views"
-      xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="RestaurantManagement.Views.MenuView"
+      xmlns:System="clr-namespace:System;assembly=mscorlib" xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.MenuView"
+      xmlns:filter="clr-namespace:DataGridFilterLibrary;assembly=DataGridFilterLibrary"
       mc:Ignorable="d"
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="800"
       Title="MenuView" Height="Auto" Width="Auto" MinWidth="800" MinHeight="600">
     <Page.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
@@ -34,59 +35,38 @@
         <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource {x:Type DataGrid}}">
             <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
         </Style>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="FontSize" Value="16" />
+        </Style>
     </Page.Resources>
     <Grid Background="#FFE5E5E5">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" MaxHeight="39" />
             <RowDefinition Height="14*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="58*" MaxWidth="58" />
-            <ColumnDefinition Width="20*" MaxWidth="20" />
-            <ColumnDefinition Width="200*" MaxWidth="200" />
-            <ColumnDefinition Width="120*" MinWidth="120" />
-            <ColumnDefinition Width="273*" />
-            <ColumnDefinition Width="130*" MaxWidth="130" MinWidth="130" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Button x:Name="searchButton" Content="Szukaj" HorizontalAlignment="Right" Margin="0,4,0.4,4.2" VerticalAlignment="Center" Width="130" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="4" HorizontalContentAlignment="Stretch" Height="31" />
-        <DataGrid x:Name="menuDataGrid" Margin="0,39,0.4,0" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" AutoGenerateColumns="False" GridLinesVisibility="All" SelectionMode="Single" IsTextSearchEnabled="True" Grid.ColumnSpan="5" Grid.RowSpan="2" HeadersVisibility="Column">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" CanUserResize="False" ClipboardContentBinding="{x:Null}" Header="Numer" MinWidth="58" IsReadOnly="True" MaxWidth="58" />
-                <DataGridCheckBoxColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" IsReadOnly="False" />
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nazwa" IsReadOnly="True" MinWidth="200" />
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Rodzaj" MaxWidth="120" MinWidth="120" />
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Cena" />
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Składniki" IsReadOnly="True" MinWidth="200" />
-            </DataGrid.Columns>
-        </DataGrid>
-        <TextBox x:Name="filterBynumberTextBox" Margin="0,5,19.6,4.2" TextWrapping="Wrap" VerticalAlignment="Center" MaxLength="4" Height="30" VerticalContentAlignment="Center" Grid.ColumnSpan="2" />
-        <Button x:Name="addButton" Content="Dodaj" HorizontalAlignment="Left" VerticalAlignment="Top" Width="113" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Click="addButton_Click" Margin="6.6,39,0,0" Grid.RowSpan="2" />
-        <Button x:Name="editButton" Content="Edytuj" HorizontalAlignment="Left" Margin="6.6,35.8,0,0" VerticalAlignment="Top" Width="113" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="5" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Click="editButton_Click" />
-        <TextBox x:Name="fliterByNameTextBox" Margin="0.4,5,115.6,4.2" TextWrapping="Wrap" VerticalAlignment="Center" MaxLength="4" Height="30" Grid.Column="2" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center" Grid.ColumnSpan="2">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.352" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <ComboBox x:Name="comboBox" Grid.Column="4" HorizontalAlignment="Left" Margin="5.4,3,0,5.2" VerticalAlignment="Center" Height="31" SelectedIndex="0" Width="120">
+        <Button x:Name="addButton" Content="Dodaj" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" Click="addButton_Click" Margin="6,36,0,0" />
+        <Button x:Name="editButton" Content="Edytuj" Margin="6,72,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" Click="editButton_Click" />
+        <ComboBox x:Name="inMenuComboBox" HorizontalAlignment="Right" VerticalAlignment="Top" Height="32" SelectedIndex="0" Grid.Column="1" Margin="6,0,0,0" VerticalContentAlignment="Center" Width="220">
             <ComboBoxItem Content="Wszystkie dania" />
             <ComboBoxItem Content="Tylko dania w menu" />
             <ComboBoxItem Content="Tylko dania poza menu" />
         </ComboBox>
-        <Button x:Name="toogleInMenuButton" Content="Dodaj do menu" HorizontalAlignment="Left" Margin="6.6,71.8,0,0" VerticalAlignment="Top" Width="113" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="5" Grid.Row="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" FontSize="13.333" />
-        <TextBox x:Name="fliterByTypeTextBox" Margin="0.4,4,2.6,5.2" TextWrapping="Wrap" VerticalAlignment="Center" MaxLength="4" Height="30" Grid.Column="3" RenderTransformOrigin="0.5,0.5" VerticalContentAlignment="Center">
-            <TextBox.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="-0.352" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </TextBox.RenderTransform>
-        </TextBox>
+        <Button x:Name="toogleInMenuButton" Content="Dodaj do menu" Margin="6,108,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" />
+        <DataGrid ColumnHeaderStyle="{StaticResource {ComponentResourceKey
+            TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl},
+            ResourceId=DataGridHeaderFilterControlStyle}}" filter:DataGridExtensions.IsClearButtonVisible="False"
+            x:Name="dishesDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Margin="0" EnableRowVirtualization="True" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" HorizontalContentAlignment="Center" ColumnWidth="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="iDColumn" IsReadOnly="True" Header="ID" Binding="{Binding ID}" MaxWidth="80" />
+                <DataGridTextColumn x:Name="nameColumn" Header="Nazwa" Binding="{Binding Name}" IsReadOnly="True" MinWidth="200" />
+                <DataGridTextColumn x:Name="priceColumn" Header="Cena" Binding="{Binding Price}" IsReadOnly="True" MaxWidth="80" />
+                <DataGridCheckBoxColumn filter:DataGridColumnExtensions.DoNotGenerateFilterControl="True" x:Name="in_menuColumn" Header="W menu" Binding="{Binding In_menu}" IsReadOnly="True" MaxWidth="60" />
+                <DataGridTextColumn x:Name="dishTypeColumn" Header="Typ" Binding="{Binding Types}" IsReadOnly="True" Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

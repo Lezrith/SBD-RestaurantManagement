@@ -30,9 +30,9 @@ namespace RestaurantManagement
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = username = usernameTextBox.Text;
+            string username = username = userIDTextBox.Text;
             string password = passwordBox.Password;
-            if (username == string.Empty) usernameTextBox.BorderBrush = Brushes.Red;
+            if (username == string.Empty) userIDTextBox.BorderBrush = Brushes.Red;
             if (password == string.Empty) passwordBox.BorderBrush = Brushes.Red;
             if (username != string.Empty && password != string.Empty)
             {
@@ -43,7 +43,7 @@ namespace RestaurantManagement
 
         private void usernameTextBox_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (usernameTextBox.BorderBrush == Brushes.Red) usernameTextBox.ClearValue(BorderBrushProperty);
+            if (userIDTextBox.BorderBrush == Brushes.Red) userIDTextBox.ClearValue(BorderBrushProperty);
         }
 
         private void passwordBox_GotFocus(object sender, RoutedEventArgs e)

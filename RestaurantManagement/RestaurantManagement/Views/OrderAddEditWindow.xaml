@@ -1,0 +1,85 @@
+﻿<Controls:MetroWindow
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        xmlns:local="clr-namespace:RestaurantManagement.Views"
+        xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.OrderAddEditWindow"
+        mc:Ignorable="d"
+        d:DesignHeight="400" d:DesignWidth="300"
+        Title="OrderAddEditWindow" Width="350" Height="400" BorderThickness="1,0,1,1" Loaded="MetroWindow_Loaded" BorderBrush="Black" ResizeMode="NoResize">
+    <Controls:MetroWindow.Resources>
+        <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
+        <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource {x:Type PasswordBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+            <Setter Property="Background" Value="{StaticResource LazurBlue}" />
+        </Style>
+        <Style TargetType="{x:Type DataGrid}" BasedOn="{StaticResource {x:Type DataGrid}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
+        </Style>
+    </Controls:MetroWindow.Resources>
+    <Grid x:Name="grid1" VerticalAlignment="Top" Margin="0" Width="350">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Data/Godzina:" Height="24" Width="93" />
+        <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Nr stolika:" Height="24" Width="70" />
+        <ComboBox x:Name="table_NumberTextBox" VerticalAlignment="Center" Text="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3,3,-69,3" Height="26" Grid.Column="1" />
+        <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Metoda płatności:" Height="24" Width="116" />
+        <ComboBox x:Name="payment_method_NameComboBox" VerticalAlignment="Center" Grid.Row="2" Margin="3,3,-69,3" ItemsSource="{Binding}" Height="26" DisplayMemberPath="Payment_method_Name" Grid.Column="1">
+            <ComboBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel />
+                </ItemsPanelTemplate>
+            </ComboBox.ItemsPanel>
+        </ComboBox>
+        <wpfTool:DateTimePicker Grid.Column="1" Margin="3,5,-69,5" VerticalAlignment="Center" Height="20" />
+        <Label Content="Dania:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,4" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="68" />
+        <ComboBox x:Name="dish_NameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="3,3,0,3" Grid.Row="3" Text="{Binding Dish_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="144" />
+        <TextBox x:Name="quantityTextBox" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,3,-39,3" Grid.Row="3" Text="{Binding Quantity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="40" />
+        <Button x:Name="addButton" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,-69,2" Grid.Row="3" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}">
+            <Rectangle Width="10" Height="10"
+                Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                <Rectangle.OpacityMask>
+                    <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_add}" />
+                </Rectangle.OpacityMask>
+            </Rectangle>
+        </Button>
+        <DataGrid x:Name="orderContentsDataGrid" Grid.ColumnSpan="2" ItemsSource="{Binding}" Grid.Row="4" Grid.RowSpan="1" SelectionMode="Single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" Margin="0,0,-65,-211" HorizontalAlignment="Left" Width="340">
+            <DataGrid.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Control.HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="Control.VerticalContentAlignment" Value="Stretch" />
+                </Style>
+            </DataGrid.ItemContainerStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nazwa" IsReadOnly="True" />
+                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Ilość" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Controls:MetroWindow>

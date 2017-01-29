@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using RestaurantManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,10 +21,15 @@ namespace RestaurantManagement.Views
     /// </summary>
     public partial class DishAddEditWindow : MetroWindow
     {
-        public DishAddEditWindow()
+        public DishAddEditWindow(string title, Dish dish)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            this.Title = title;
+        }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

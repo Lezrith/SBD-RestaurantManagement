@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManagement.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,26 @@ namespace RestaurantManagement.Views
         public ReservationsView()
         {
             InitializeComponent();
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenReservationAddEditWindow("Dodaj rezerwację", null);
+        }
+
+        private void OpenReservationAddEditWindow(string title, Reservation reservation)
+        {
+            var addEditWindow = new ReservationAddEditWindow(title, reservation);
+            addEditWindow.ShowDialog();
+        }
+
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedOrders = reservationsDataGrid.SelectedItems;
+            if (selectedOrders.Count == 1)
+            {
+                OpenReservationAddEditWindow("Edytuj rezerwację", null);
+            }
         }
     }
 }

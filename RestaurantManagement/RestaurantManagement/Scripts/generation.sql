@@ -7,7 +7,7 @@
 
 
 CREATE
-  TABLE Addreses
+  TABLE Addresses
   (
     ID INTEGER NOT NULL IDENTITY NOT FOR REPLICATION ,
     Street NVARCHAR (50) NOT NULL ,
