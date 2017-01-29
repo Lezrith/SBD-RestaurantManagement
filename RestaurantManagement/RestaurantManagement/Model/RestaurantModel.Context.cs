@@ -13,10 +13,10 @@ namespace RestaurantManagement.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class RestaurantDBContext : DbContext
+    public partial class RestaurantDBEntities : DbContext
     {
-        public RestaurantDBContext()
-            : base("name=RestaurantDBContext")
+        public RestaurantDBEntities()
+            : base("name=RestaurantDBEntities")
         {
         }
     
@@ -25,7 +25,7 @@ namespace RestaurantManagement.Model
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Addres> Addreses { get; set; }
+        public virtual DbSet<Address> Addresses { get; set; }
         public virtual DbSet<Delivery> Deliveries { get; set; }
         public virtual DbSet<Dish> Dishes { get; set; }
         public virtual DbSet<Dishes_contents> Dishes_contents { get; set; }

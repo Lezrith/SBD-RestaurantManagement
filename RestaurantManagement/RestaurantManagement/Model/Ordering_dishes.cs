@@ -14,7 +14,7 @@ namespace RestaurantManagement.Model
     
     public partial class Ordering_dishes
     {
-        public System.TimeSpan Order_Time { get; set; }
+        public System.DateTime Order_Time { get; set; }
         public int Table_Number { get; set; }
         public int Employee_ID { get; set; }
         public int Quantity { get; set; }

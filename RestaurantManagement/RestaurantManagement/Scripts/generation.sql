@@ -20,11 +20,11 @@ CREATE
   )
   ON "default"
 GO
-ALTER TABLE Addreses
+ALTER TABLE Addresses
 ADD
 CHECK ( NUMBER = 1 )
 GO
-ALTER TABLE Addreses
+ALTER TABLE Addresses
 ADD CONSTRAINT Arc_2 CHECK (
 ( (Supplier_Name IS NOT NULL) AND
 (
@@ -43,20 +43,20 @@ ADD CONSTRAINT Arc_2 CHECK (
 )
 ;
 CREATE UNIQUE NONCLUSTERED INDEX
-Addresses_Employee_ID_IDX ON Addreses
+Addresses_Employee_ID_IDX ON Addresses
 (
 Employee_ID
 )
 ON "default"
 GO
 CREATE UNIQUE NONCLUSTERED INDEX
-Addresses_Supplier_Name_IDX ON Addreses
+Addresses_Supplier_Name_IDX ON Addresses
 (
 Supplier_Name
 )
 ON "default"
 GO
-ALTER TABLE Addreses ADD CONSTRAINT Addresses_PK PRIMARY KEY CLUSTERED (ID)
+ALTER TABLE Addresses ADD CONSTRAINT Addresses_PK PRIMARY KEY CLUSTERED (ID)
 WITH
   (
     ALLOW_PAGE_LOCKS = ON ,
@@ -238,7 +238,7 @@ GO
 CREATE
   TABLE Ordering_dishes
   (
-    Order_Time TIME NOT NULL ,
+    Order_Time DATETIME NOT NULL ,
     Table_Number INTEGER NOT NULL ,
     Employee_ID  INTEGER NOT NULL ,
     Quantity     INTEGER NOT NULL ,
@@ -259,7 +259,7 @@ GO
 CREATE
   TABLE Orders
   (
-    TIME TIME NOT NULL ,
+    TIME DATETIME NOT NULL ,
     Table_Number INTEGER NOT NULL ,
     Employee_ID  INTEGER NOT NULL ,
     Payment_method_Name NVARCHAR (30) NOT NULL
@@ -407,7 +407,7 @@ WITH
   ON "default"
 GO
 
-ALTER TABLE Addreses
+ALTER TABLE Addresses
 ADD CONSTRAINT Addresses_Employees_FK FOREIGN KEY
 (
 Employee_ID
@@ -422,7 +422,7 @@ DELETE
 UPDATE NO ACTION
 GO
 
-ALTER TABLE Addreses
+ALTER TABLE Addresses
 ADD CONSTRAINT Addresses_Suppliers_FK FOREIGN KEY
 (
 Supplier_Name
@@ -517,7 +517,7 @@ ADD CONSTRAINT Employees_Addresses_FK FOREIGN KEY
 (
 Address_ID
 )
-REFERENCES Addreses
+REFERENCES Addresses
 (
 ID
 )
@@ -703,7 +703,7 @@ ADD CONSTRAINT Suppliers_Addresses_FK FOREIGN KEY
 (
 Address_ID
 )
-REFERENCES Addreses
+REFERENCES Addresses
 (
 ID
 )

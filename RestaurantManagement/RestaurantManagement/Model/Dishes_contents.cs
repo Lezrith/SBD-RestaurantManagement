@@ -14,7 +14,7 @@ namespace RestaurantManagement.Model
     
     public partial class Dishes_contents
     {
-        public decimal Quantity { get; set; }
+        public int Quantity { get; set; }
         public string Ingredient_Name { get; set; }
         public int Dish_ID { get; set; }
     

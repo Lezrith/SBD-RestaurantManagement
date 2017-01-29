@@ -20,7 +20,7 @@ namespace RestaurantManagement.Model
             this.Ordering_dishes = new HashSet<Ordering_dishes>();
         }
     
-        public System.TimeSpan TIME { get; set; }
+        public System.DateTime TIME { get; set; }
         public int Table_Number { get; set; }
         public int Employee_ID { get; set; }
         public string Payment_method_Name { get; set; }

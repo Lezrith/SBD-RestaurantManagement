@@ -17,7 +17,7 @@ namespace RestaurantManagement.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Supplier()
         {
-            this.Addreses = new HashSet<Addres>();
+            this.Addresses = new HashSet<Address>();
             this.Deliveries = new HashSet<Delivery>();
         }
     
@@ -27,8 +27,8 @@ namespace RestaurantManagement.Model
         public int Address_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Addres> Addreses { get; set; }
-        public virtual Addres Addres { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual Address Address { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Delivery> Deliveries { get; set; }
     }

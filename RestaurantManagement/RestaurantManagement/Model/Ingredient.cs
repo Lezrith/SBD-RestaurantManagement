@@ -22,7 +22,7 @@ namespace RestaurantManagement.Model
         }
     
         public string Name { get; set; }
-        public decimal Quantity_in_stock { get; set; }
+        public int Quantity_in_stock { get; set; }
         public string Unit { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

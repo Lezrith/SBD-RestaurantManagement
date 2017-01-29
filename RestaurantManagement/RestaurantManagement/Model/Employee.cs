@@ -17,7 +17,7 @@ namespace RestaurantManagement.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Employee()
         {
-            this.Addreses = new HashSet<Addres>();
+            this.Addresses = new HashSet<Address>();
             this.Orders = new HashSet<Order>();
         }
     
@@ -32,8 +32,8 @@ namespace RestaurantManagement.Model
         public string Hashed_password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Addres> Addreses { get; set; }
-        public virtual Addres Addres { get; set; }
+        public virtual ICollection<Address> Addresses { get; set; }
+        public virtual Address Address { get; set; }
         public virtual Position Position { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
