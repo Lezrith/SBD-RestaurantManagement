@@ -27,5 +27,9 @@ namespace RestaurantManagement.Views
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             this.Title = title;
         }
+
+        private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }

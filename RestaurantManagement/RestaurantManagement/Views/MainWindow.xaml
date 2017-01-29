@@ -6,7 +6,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:local="clr-namespace:RestaurantManagement"
         mc:Ignorable="d"
-        Title="Restaurant Management" Height="600" Width="800" MinWidth="900" MinHeight="700">
+        Title="Restaurant Management" Height="600" Width="800" MinWidth="900" MinHeight="700" WindowState="Maximized">
     <Window.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
         <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -45,6 +45,9 @@
         </TabItem>
         <TabItem Header="Dostawy">
             <Frame Source="/Views/DeliveriesView.xaml" />
+        </TabItem>
+        <TabItem Header="Dostawcy">
+            <Frame Source="/Views/SuppliersView.xaml" />
         </TabItem>
         <TabItem Header="Pracownicy">
             <Frame Source="/Views/EmployeesView.xaml" />

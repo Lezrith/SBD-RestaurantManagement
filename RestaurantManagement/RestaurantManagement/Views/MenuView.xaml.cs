@@ -1,5 +1,4 @@
-﻿using MahApps.Metro.Controls;
-using RestaurantManagement.Model;
+﻿using RestaurantManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,13 +7,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace RestaurantManagement.Views
 {
@@ -58,11 +50,6 @@ namespace RestaurantManagement.Views
             {
                 openDishAddEditWindow("Edytuj danie", null);
             }
-        }
-
-        private void searchButton_Click(object sender, RoutedEventArgs e)
-        {
-            filterPopup.IsOpen = !filterPopup.IsOpen;
         }
     }
 
