@@ -2,17 +2,11 @@
 using RestaurantManagement.Model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace RestaurantManagement.Views
 {
@@ -21,15 +15,132 @@ namespace RestaurantManagement.Views
     /// </summary>
     public partial class DishAddEditWindow : MetroWindow
     {
+        private Dish dish;
+
         public DishAddEditWindow(string title, Dish dish)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             this.Title = title;
+            using (var context = new RestaurantDBEntities())
+            {
+                type_NameComboBox.ItemsSource = context.Types.ToList();
+                ingredient_NameComboBox.ItemsSource = context.Ingredients.ToList();
+            }
+            if (dish == null)
+            {
+                this.dish = new Dish();
+                this.dish.ID = -1;
+            }
+            else
+            {
+                this.dish = dish;
+                this.dish.selectedType = dish.Types.ToList()[0].Name;
+            }
+            grid1.DataContext = this.dish;
         }
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            var contents = (from dc in dish.Dishes_contents
+                            where dc.Ingredient_Name == ingredient_NameComboBox.Text
+                            select dc).FirstOrDefault();
+
+            if (contents == null)
+            {
+                var dc = new Dishes_contents
+                {
+                    Quantity = Int32.Parse(quantityTextBox.Text),
+                    Ingredient_Name = ingredient_NameComboBox.Text,
+                    Dish_ID = this.dish.ID
+                };
+                dish.Dishes_contents.Add(dc);
+            }
+            else
+            {
+                contents.Quantity = Int32.Parse(quantityTextBox.Text);
+            }
+            PopulateDishContentsDataGrid();
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void confirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.dish.ID == -1)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    context.Dishes.Add(this.dish);
+                    context.SaveChanges();
+                }
+            }
+            else
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    context.Dishes.Attach(this.dish);
+                    context.Entry(this.dish).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+            }
+            using (var context = new RestaurantDBEntities())
+            {
+                var type = (from t in context.Types
+                            where t.Name == this.dish.selectedType
+                            select t).FirstOrDefault();
+                var dish = context.Dishes.ToList().Find(d => d.ID == this.dish.ID);
+                dish.Types.Clear();
+                dish.Types.Add(type);
+                dish.Dishes_contents.Clear();
+                foreach (var dc in this.dish.Dishes_contents)
+                {
+                    dish.Dishes_contents.Add(new Dishes_contents { Dish_ID = dc.Dish_ID, Ingredient_Name = dc.Ingredient_Name, Quantity = dc.Quantity });
+                }
+                context.SaveChanges();
+            }
+            this.Close();
+        }
+
+        private void dishes_contentsDataGrid_ContextMenuOpening(object sender, System.Windows.Controls.ContextMenuEventArgs e)
+        {
+            if (dishes_contentsDataGrid.SelectedItem == null) e.Handled = true;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            if (dishes_contentsDataGrid.SelectedItem != null)
+            {
+                this.dish.Dishes_contents.Remove((RestaurantManagement.Model.Dishes_contents)dishes_contentsDataGrid.SelectedItem);
+                PopulateDishContentsDataGrid();
+            }
+        }
+
+        private void PopulateDishContentsDataGrid()
+        {
+            grid1.DataContext = null;
+            grid1.DataContext = this.dish;
+        }
+
+        private void priceTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            if (e.Text == ".")
+            {
+                priceTextBox.CaretIndex += 1;
+                e.Handled = true;
+            }
+        }
+
+        private void quantityTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            e.Handled = !Common.IsInteger(e.Text);
         }
     }
 }

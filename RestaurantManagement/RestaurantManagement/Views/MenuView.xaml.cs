@@ -7,6 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Globalization;
+using System.Data.Entity;
 
 namespace RestaurantManagement.Views
 {
@@ -18,18 +21,18 @@ namespace RestaurantManagement.Views
         public MenuView()
         {
             InitializeComponent();
-            PopulateMenuDataGrid();
+            PopulateMenuDataGrid(null);
         }
 
-        private void PopulateMenuDataGrid()
+        private void PopulateMenuDataGrid(bool? inMenu)
         {
-            //get menu from database, add it to ObservableList<> and bind it to ItemSource property
-            //add bindings to columns, set columns readonly
-            ObservableCollection<Test> tests = new ObservableCollection<Test>();
-            tests.Add(new Test("haha", 1));
-            tests.Add(new Test("hehe", 2));
-            tests.Add(new Test("hihi", 3));
-            dishesDataGrid.ItemsSource = tests;
+            using (var context = new RestaurantDBEntities())
+            {
+                var dishes = context.Dishes.Include("Types").Include("Dishes_contents").ToList();
+                if (inMenu != null) dishes = dishes.FindAll(d => d.In_menu == inMenu);
+                if (dishesDataGrid != null) dishesDataGrid.ItemsSource = dishes;
+            }
+            addButton.Content = "Dodaj";
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
@@ -39,8 +42,9 @@ namespace RestaurantManagement.Views
 
         private void openDishAddEditWindow(string title, Dish dish)
         {
-            var addEditWindow = new DishAddEditWindow(title, null);
+            var addEditWindow = new DishAddEditWindow(title, dish);
             addEditWindow.ShowDialog();
+            PopulateMenuDataGrid(null);
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)
@@ -48,20 +52,65 @@ namespace RestaurantManagement.Views
             var selectedItems = dishesDataGrid.SelectedItems;
             if (selectedItems.Count == 1)
             {
-                openDishAddEditWindow("Edytuj danie", null);
+                openDishAddEditWindow("Edytuj danie", (Dish)selectedItems[0]);
+            }
+        }
+
+        private void toogleInMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItems = dishesDataGrid.SelectedItems;
+            if (selectedItems.Count > 0)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    foreach (var i in selectedItems)
+                    {
+                        var result = context.Dishes.SingleOrDefault(d => d.ID == ((Dish)i).ID);
+                        if (result != null)
+                        {
+                            result.In_menu = !result.In_menu;
+                        }
+                    }
+                    context.SaveChanges();
+                }
+            }
+            PopulateMenuDataGrid(null);
+        }
+
+        private void inMenuComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (inMenuComboBox.SelectedIndex)
+            {
+                case 0:
+                    PopulateMenuDataGrid(null);
+                    break;
+
+                case 1:
+                    PopulateMenuDataGrid(true);
+                    break;
+
+                case 2:
+                    PopulateMenuDataGrid(false);
+                    break;
+
+                default:
+                    break;
             }
         }
     }
 
-    public class Test
+    [ValueConversion(typeof(ICollection<Model.Type>), typeof(string))]
+    public class TypeConverter : IValueConverter
     {
-        public string Types { get; set; }
-        public int ID { get; set; }
-
-        public Test(string a, int b)
+        public object Convert(object value, System.Type targetType, object parameter, CultureInfo culture)
         {
-            this.Types = a;
-            this.ID = b;
+            var data = (ICollection<Model.Type>)value;
+            return data.ToList()[0].Name;
+        }
+
+        public object ConvertBack(object value, System.Type targetType, object parameter, CultureInfo culture)
+        {
+            return null;
         }
     }
 }

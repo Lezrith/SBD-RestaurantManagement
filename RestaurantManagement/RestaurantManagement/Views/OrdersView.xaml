@@ -39,9 +39,11 @@
         <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}">
             <Setter Property="FontFamily" Value="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium" />
         </Style>
+        <RestaurantManagement:RestaurantDataSet x:Key="restaurantDataSet" />
+        <CollectionViewSource x:Key="ordersViewSource" Source="{Binding Orders, Source={StaticResource restaurantDataSet}}" />
     </Page.Resources>
 
-    <Grid Background="#FFE5E5E5">
+    <Grid Background="#FFE5E5E5" DataContext="{StaticResource ordersViewSource}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition Width="Auto" MinWidth="226" />
@@ -57,7 +59,13 @@
             ResourceId=DataGridHeaderFilterControlStyle}}" filter:DataGridExtensions.IsClearButtonVisible="False"
             x:Name="ordersDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Row="0" Margin="0" EnableRowVirtualization="True" AutoGenerateColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False" HorizontalContentAlignment="Center" ColumnWidth="Auto">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="tIMEColumn" Width="SizeToHeader" Header="Godzina" Binding="{Binding TIME}" IsReadOnly="True" />
+                <DataGridTemplateColumn x:Name="tIMEColumn1" Header="Data/godzina" Width="SizeToHeader" IsReadOnly="True" filter:DataGridColumnExtensions.DoNotGenerateFilterControl="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding TIME, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn x:Name="employee_IDColumn" Width="SizeToHeader" Header="Pracownik" Binding="{Binding Employee_ID}" IsReadOnly="True" />
                 <DataGridTextColumn x:Name="table_NumberColumn" Width="SizeToHeader" Header="Nr stolika" Binding="{Binding Table_Number}" IsReadOnly="True" />
                 <DataGridTextColumn x:Name="payment_method_NameColumn" Width="SizeToHeader" Header="Metoda płatności" Binding="{Binding Payment_method_Name}" IsReadOnly="True" />

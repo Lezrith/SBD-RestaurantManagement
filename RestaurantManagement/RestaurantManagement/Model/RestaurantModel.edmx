@@ -560,7 +560,7 @@
           <Property Name="In_menu" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Dishes_contents" Relationship="Self.Dishes_contents_Dishes_FK" FromRole="Dishes" ToRole="Dishes_contents" />
           <NavigationProperty Name="Ordering_dishes" Relationship="Self.Ordering_dishes_Dishes_FK" FromRole="Dishes" ToRole="Ordering_dishes" />
-          <NavigationProperty Name="Types" Relationship="Self.Dish_Type" FromRole="Dishes" ToRole="Types" />
+          <NavigationProperty Name="Types" Relationship="RestaurantModel.Dish_Type" FromRole="Dishes" ToRole="Types" />
         </EntityType>
         <EntityType Name="Dishes_contents">
           <Key>
