@@ -25,7 +25,7 @@
           </Key>
           <Property Name="DATE" Type="datetime" Nullable="false" />
           <Property Name="Supplier_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Cost" Type="numeric" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Cost" Type="numeric" Precision="9" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="Dish_Type">
           <Key>
@@ -89,7 +89,7 @@
             <PropertyRef Name="Supplier_Name" />
             <PropertyRef Name="Ingredient_Name" />
           </Key>
-          <Property Name="Quantity" Type="numeric" Precision="5" Scale="3" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
           <Property Name="Delivery_Date" Type="datetime" Nullable="false" />
           <Property Name="Supplier_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Ingredient_Name" Type="nvarchar" MaxLength="30" Nullable="false" />
@@ -545,7 +545,7 @@
           </Key>
           <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Supplier_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Cost" Type="Decimal" Precision="5" Scale="2" Nullable="false" />
+          <Property Name="Cost" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
           <NavigationProperty Name="Supplier" Relationship="Self.Deliveries_Suppliers_FK" FromRole="Deliveries" ToRole="Suppliers" />
           <NavigationProperty Name="Items_in_deliveries" Relationship="Self.Items_in_deliveries_Deliveries_FK" FromRole="Deliveries" ToRole="Items_in_deliveries" />
         </EntityType>
@@ -606,7 +606,7 @@
             <PropertyRef Name="Supplier_Name" />
             <PropertyRef Name="Ingredient_Name" />
           </Key>
-          <Property Name="Quantity" Type="Decimal" Precision="5" Scale="3" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
           <Property Name="Delivery_Date" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Supplier_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Ingredient_Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />

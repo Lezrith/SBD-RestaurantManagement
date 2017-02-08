@@ -118,7 +118,7 @@ namespace RestaurantManagement.Views
         {
             if (dishes_contentsDataGrid.SelectedItem != null)
             {
-                this.dish.Dishes_contents.Remove((RestaurantManagement.Model.Dishes_contents)dishes_contentsDataGrid.SelectedItem);
+                this.dish.Dishes_contents.Remove((Dishes_contents)dishes_contentsDataGrid.SelectedItem);
                 PopulateDishContentsDataGrid();
             }
         }
@@ -134,6 +134,10 @@ namespace RestaurantManagement.Views
             if (e.Text == ".")
             {
                 priceTextBox.CaretIndex += 1;
+                e.Handled = true;
+            }
+            if (!Common.IsInteger(e.Text))
+            {
                 e.Handled = true;
             }
         }

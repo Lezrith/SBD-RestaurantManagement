@@ -42,7 +42,7 @@ namespace RestaurantManagement.Views
                 {
                     this.address = context.Addresses.ToList().Find(address => address.Supplier_Name == this.supplier.Name);
                 }
-                nameTextBox.IsReadOnly = true;
+                nameTextBox.IsEnabled = true;
             }
             grid1.DataContext = this.supplier;
             grid2.DataContext = this.address;
@@ -61,7 +61,7 @@ namespace RestaurantManagement.Views
         {
             using (var context = new RestaurantDBEntities())
             {
-                if (!nameTextBox.IsReadOnly)
+                if (!nameTextBox.IsEnabled)
                 {
                     context.Addresses.Add(this.address);
                     context.SaveChanges();

@@ -23,18 +23,6 @@ namespace RestaurantManagement.Views
     /// </summary>
     public partial class DeliveriesView : Page
     {
-        private class Test3
-        {
-            public Test3(string v1, int v2)
-            {
-                this.Supplier_Name = v1;
-                this.Cost = v2;
-            }
-
-            public int Cost { get; set; }
-            public string Supplier_Name { get; set; }
-        }
-
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
             OpenDeliveryAddEditWindow("Dodaj dostawę", null);
@@ -44,6 +32,7 @@ namespace RestaurantManagement.Views
         {
             var addEditWindow = new DeliveryAddEditWindow(title, delivery);
             addEditWindow.ShowDialog();
+            PopulateDeliveriesDataGrid();
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)
@@ -51,7 +40,7 @@ namespace RestaurantManagement.Views
             var selectedItems = deliveriesDataGrid.SelectedItems;
             if (selectedItems.Count == 1)
             {
-                OpenDeliveryAddEditWindow("Edytuj dostawę", null);
+                OpenDeliveryAddEditWindow("Edytuj dostawę", selectedItems[0] as Delivery);
             }
         }
 
@@ -63,13 +52,10 @@ namespace RestaurantManagement.Views
 
         private void PopulateDeliveriesDataGrid()
         {
-            //get menu from database, add it to ObservableList<> and bind it to ItemSource property
-            //add bindings to columns, set columns readonly
-            ObservableCollection<Test3> tests = new ObservableCollection<Test3>();
-            tests.Add(new Test3("haha", 1));
-            tests.Add(new Test3("hehe", 2));
-            tests.Add(new Test3("hihi", 3));
-            deliveriesDataGrid.ItemsSource = tests;
+            using (var context = new RestaurantDBEntities())
+            {
+                deliveriesDataGrid.ItemsSource = context.Deliveries.Include(nameof(Items_in_deliveries)).ToList();
+            }
         }
     }
 }

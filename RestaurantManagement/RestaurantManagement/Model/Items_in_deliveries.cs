@@ -14,7 +14,7 @@ namespace RestaurantManagement.Model
     
     public partial class Items_in_deliveries
     {
-        public decimal Quantity { get; set; }
+        public int Quantity { get; set; }
         public System.DateTime Delivery_Date { get; set; }
         public string Supplier_Name { get; set; }
         public string Ingredient_Name { get; set; }

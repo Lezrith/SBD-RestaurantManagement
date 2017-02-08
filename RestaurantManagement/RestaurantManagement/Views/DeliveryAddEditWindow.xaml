@@ -42,22 +42,23 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Data:" />
-            <DatePicker x:Name="dATEDatePicker" VerticalAlignment="Center" SelectedDate="{Binding DATE, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3,4,-17,4" Grid.Column="1" />
+            <DatePicker x:Name="dATEDatePicker" DisplayDateStart="01/01/1990" VerticalAlignment="Center" SelectedDate="{Binding DATE, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3,4,-17,4" Grid.Column="1" />
             <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Dostawca:" />
-            <ComboBox x:Name="supplier_NameTextBox" VerticalAlignment="Center" Text="{Binding Supplier_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3,4,-17,4" Height="23" Grid.Column="1" />
+            <ComboBox x:Name="supplier_NameComboBox" VerticalAlignment="Center" SelectedValue="{Binding Supplier_Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Name" DisplayMemberPath="Name" Grid.Row="1" Margin="3,4,-17,4" Height="23" Grid.Column="1" SelectedIndex="0" />
             <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Cena:" />
-            <TextBox x:Name="costTextBox" VerticalAlignment="Center" Text="{Binding Cost, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3,4,-17,4" Height="23" Grid.Column="1" />
+            <TextBox x:Name="costTextBox" VerticalAlignment="Center" Text="{Binding Cost, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=\{0:F\}}" Grid.Row="2" Margin="3,4,-17,4" Height="23" Grid.Column="1" PreviewTextInput="costTextBox_PreviewTextInput" MaxLength="10" />
             <Label Content="Zawartość:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,4" Grid.Row="3" VerticalAlignment="Center" Height="24" />
             <StackPanel Grid.Column="1" Margin="3,1,-7,2" Orientation="Horizontal" Grid.Row="3">
-                <ComboBox x:Name="ingredient_NameComboBox" HorizontalAlignment="Left" Height="26" Margin="0,3" VerticalAlignment="Center" Width="179" />
+                <ComboBox x:Name="ingredient_NameComboBox" HorizontalAlignment="Left" Height="26" Margin="0,3" VerticalAlignment="Center" Width="179" DisplayMemberPath="Name" />
                 <TextBox x:Name="quantityTextBox" HorizontalAlignment="Right" Height="26" Margin="2,3,0,3" VerticalAlignment="Center" Width="40" />
-                <Button x:Name="addButton" HorizontalAlignment="Right" Margin="5,0,0,0" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}">
+                <Button x:Name="addButton" HorizontalAlignment="Right" Margin="5,0,0,0" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}" Click="addButton_Click">
                     <Rectangle Width="10" Height="10"
                         Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                         <Rectangle.OpacityMask>
@@ -66,12 +67,23 @@
                     </Rectangle>
                 </Button>
             </StackPanel>
-            <DataGrid x:Name="items_in_deliveriesDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="2" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,0,-25,0" Grid.Row="4" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False">
+            <DataGrid x:Name="items_in_deliveriesDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="2" EnableRowVirtualization="True" Margin="0,0,-25,0" Grid.Row="4" RowDetailsVisibilityMode="VisibleWhenSelected" IsReadOnly="True" CanUserReorderColumns="False" CanUserResizeColumns="False" MinHeight="200" ContextMenuOpening="items_in_deliveriesDataGrid_ContextMenuOpening">
+                <DataGrid.ContextMenu>
+                    <ContextMenu FontFamily="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium">
+                        <MenuItem Header="Usuń" Click="MenuItem_Click">
+                            <MenuItem.Icon>
+                                <ContentPresenter Content="{DynamicResource appbar_list_delete}" Height="{Binding Header.ActualHeight, ElementName=menuItem1}" Width="{Binding Header.ActualHeight, ElementName=menuItem1}" />
+                            </MenuItem.Icon>
+                        </MenuItem>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
                 <DataGrid.Columns>
                     <DataGridTextColumn x:Name="ingredient_NameColumn" Binding="{Binding Ingredient_Name}" Header="Składnik" Width="SizeToHeader" />
                     <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Ilość" Width="SizeToHeader" />
                 </DataGrid.Columns>
             </DataGrid>
+            <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Click="confirmButton_Click" />
+            <Button x:Name="cancelButton" Grid.ColumnSpan="2" Content="Anuluj" HorizontalAlignment="Right" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="0,0,60,0" Click="cancelButton_Click" />
         </Grid>
     </Grid>
 </Controls:MetroWindow>
