@@ -1,15 +1,16 @@
 ﻿<Page
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:local="clr-namespace:RestaurantManagement.Views"
-      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-      xmlns:filter="clr-namespace:DataGridFilterLibrary;assembly=DataGridFilterLibrary"
-      xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.SuppliersView"
-      mc:Ignorable="d"
-      Title="SuppliersView"
-      d:DesignHeight="600" d:DesignWidth="800" Height="Auto" Width="Auto" MinWidth="800" MinHeight="600">
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:RestaurantManagement.Views"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:filter="clr-namespace:DataGridFilterLibrary;assembly=DataGridFilterLibrary"
+        xmlns:dgx="urn:tom-englert.de/DataGridExtensions"
+        xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.SuppliersView"
+        mc:Ignorable="d"
+        Title="SuppliersView"
+        d:DesignHeight="600" d:DesignWidth="800" Height="Auto" Width="Auto" MinWidth="800" MinHeight="600">
     <Page.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
         <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -50,15 +51,12 @@
         </Grid.RowDefinitions>
         <Button x:Name="addButton" Content="Dodaj" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Margin="7,0,0,0" MinWidth="131" Click="addButton_Click" />
         <Button x:Name="editButton" Content="Edytuj" Margin="7,36,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" MinWidth="131" Click="editButton_Click" />
-        <Button x:Name="deleteButton" Content="Usuń" Margin="7,72,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" />
-        <DataGrid ColumnHeaderStyle="{StaticResource {ComponentResourceKey
-            TypeInTargetAssembly={x:Type filter:DataGridHeaderFilterControl},
-            ResourceId=DataGridHeaderFilterControlStyle}}" filter:DataGridExtensions.IsClearButtonVisible="False"
+        <DataGrid dgx:DataGridFilter.IsAutoFilterEnabled="True"
             x:Name="suppliersDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0" ItemsSource="{Binding}" EnableRowVirtualization="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="nameColumn" Width="SizeToHeader" Header="Nazwa" Binding="{Binding Name}" IsReadOnly="True" />
-                <DataGridTextColumn x:Name="email_addressColumn" Width="SizeToHeader" Header="Email" Binding="{Binding Email_address}" IsReadOnly="True" />
-                <DataGridTextColumn x:Name="phone_numberColumn" Width="SizeToHeader" Header="Telefon" Binding="{Binding Phone_number}" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="nameColumn" Header="Nazwa" Binding="{Binding Name}" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="email_addressColumn" Header="Email" Binding="{Binding Email_address}" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="phone_numberColumn" Header="Telefon" Binding="{Binding Phone_number}" IsReadOnly="True" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

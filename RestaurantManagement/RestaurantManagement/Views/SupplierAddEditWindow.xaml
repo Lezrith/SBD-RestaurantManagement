@@ -6,9 +6,8 @@
         xmlns:local="clr-namespace:RestaurantManagement.Views"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.SupplierAddEditWindow"
-        mc:Ignorable="d"
-        d:DesignHeight="400" d:DesignWidth="300"
-        Title="SupplierAddEditWindow" Height="300" Width="300" BorderThickness="1,0,1,1" BorderBrush="Black" ResizeMode="NoResize" Loaded="MetroWindow_Loaded">
+        mc:Ignorable="d" d:DesignWidth="300"
+        Title="SupplierAddEditWindow" Height="317" Width="300" BorderThickness="1,0,1,1" BorderBrush="Black" ResizeMode="NoResize" Loaded="MetroWindow_Loaded">
     <Controls:MetroWindow.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
         <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -41,29 +40,42 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" MinWidth="103" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Nazwa:" />
-        <TextBox x:Name="nameTextBox" VerticalAlignment="Center" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3" Height="23" Grid.Column="1" />
-        <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="E-mail:" />
-        <TextBox x:Name="email_addressTextBox" VerticalAlignment="Center" Text="{Binding Email_address, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="23" Grid.Column="1" />
-        <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Telefon:" />
-        <TextBox x:Name="phone_numberTextBox" VerticalAlignment="Center" Text="{Binding Phone_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="23" Grid.Column="1" />
-        <Label Content="Ulica:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" />
-        <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="3" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
-        <Label Content="Nr domu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" />
-        <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="4" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
-        <Label Content="Numer lokalu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="5" VerticalAlignment="Center" />
-        <TextBox x:Name="flat_numberTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="5" Text="{Binding Flat_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
-        <Label Content="Kod pocztowy:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="6" VerticalAlignment="Center" />
-        <TextBox x:Name="postalCodeTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="6" Text="{Binding PostalCode, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
-        <Label Content="Miejscowość:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="7" VerticalAlignment="Center" />
-        <TextBox x:Name="cityTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="7" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Nazwa:" Height="24" Width="53" />
+        <TextBox x:Name="nameTextBox" VerticalAlignment="Center" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3" Height="26" Grid.Column="1" />
+        <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="E-mail:" Height="24" Width="53" />
+        <TextBox x:Name="email_addressTextBox" VerticalAlignment="Center" Text="{Binding Email_address, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="26" Grid.Column="1" />
+        <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Telefon:" Height="24" Width="57" />
+        <TextBox x:Name="phone_numberTextBox" VerticalAlignment="Center" Text="{Binding Phone_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="26" Grid.Column="1" />
+        <Grid x:Name="grid2" Margin="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="100" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Content="Ulica:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" />
+            <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="0" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <Label Content="Nr domu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" />
+            <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="1" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <Label Content="Numer lokalu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" />
+            <TextBox x:Name="flat_numberTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="2" Text="{Binding Flat_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <Label Content="Kod pocztowy:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" />
+            <TextBox x:Name="postalCodeTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="3" Text="{Binding PostalCode, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <Label Content="Miejscowość:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" />
+            <TextBox x:Name="cityTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="4" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        </Grid>
+        <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Height="26" Click="confirmButton_Click" />
+        <Button x:Name="cancelButton" Content="Anuluj" HorizontalAlignment="Right" Grid.Row="4" VerticalAlignment="Bottom" Width="75" Margin="0,0,60,0" Grid.Column="1" Height="26" Click="cancelButton_Click" />
     </Grid>
 </Controls:MetroWindow>
