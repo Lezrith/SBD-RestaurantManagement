@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using RestaurantManagement.Model;
 using MahApps.Metro.Controls;
+using System.Data.Entity;
 
 namespace RestaurantManagement.Views
 {
@@ -21,15 +22,63 @@ namespace RestaurantManagement.Views
     /// </summary>
     public partial class ReservationAddEditWindow : MetroWindow
     {
+        private Reservation reservation;
+
         public ReservationAddEditWindow(string title, Reservation reservation)
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
             this.Title = title;
+            using (var context = new RestaurantDBEntities())
+            {
+                table_NumberComboBox.ItemsSource = context.Tables.ToList();
+            }
+            if (reservation == null)
+            {
+                this.reservation = new Reservation();
+                this.reservation.DATE = DateTime.Today;
+                this.reservation.START = DateTime.Now.TimeOfDay;
+                this.reservation.End = DateTime.Now.AddMinutes(5).TimeOfDay;
+            }
+            else
+            {
+                this.reservation = reservation;
+                dATEDatePicker.IsEnabled = false;
+                table_NumberComboBox.IsEnabled = false;
+                sTARTTimePicker.IsEnabled = false;
+            }
+            grid1.DataContext = this.reservation;
         }
 
         private void MetroWindow_Loaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        private void confirmButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (dATEDatePicker.IsEnabled)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    context.Reservations.Add(this.reservation);
+                    context.SaveChanges();
+                }
+            }
+            else
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    context.Reservations.Attach(this.reservation);
+                    context.Entry(this.reservation).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+            }
+            this.Close();
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

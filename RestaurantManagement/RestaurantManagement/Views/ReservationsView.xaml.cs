@@ -24,6 +24,7 @@ namespace RestaurantManagement.Views
         public ReservationsView()
         {
             InitializeComponent();
+            PopulateReservationsDataGrid();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
@@ -31,19 +32,44 @@ namespace RestaurantManagement.Views
             OpenReservationAddEditWindow("Dodaj rezerwację", null);
         }
 
+        private void editButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedReservations = reservationsDataGrid.SelectedItems;
+            if (selectedReservations.Count == 1)
+            {
+                OpenReservationAddEditWindow("Edytuj rezerwację", selectedReservations[0] as Reservation);
+            }
+        }
+
         private void OpenReservationAddEditWindow(string title, Reservation reservation)
         {
             var addEditWindow = new ReservationAddEditWindow(title, reservation);
             addEditWindow.ShowDialog();
+            PopulateReservationsDataGrid();
         }
 
-        private void editButton_Click(object sender, RoutedEventArgs e)
+        private void PopulateReservationsDataGrid()
         {
-            var selectedOrders = reservationsDataGrid.SelectedItems;
-            if (selectedOrders.Count == 1)
+            using (var context = new RestaurantDBEntities())
             {
-                OpenReservationAddEditWindow("Edytuj rezerwację", null);
+                reservationsDataGrid.ItemsSource = context.Reservations.ToList();
             }
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedReservations = reservationsDataGrid.SelectedItems;
+            if (selectedReservations.Count == 1)
+            {
+                var res = selectedReservations[0] as Reservation;
+                using (var context = new RestaurantDBEntities())
+                {
+                    var toRemove = context.Reservations.FirstOrDefault(r => r.DATE == res.DATE && r.START == res.START && r.Table_Number == res.Table_Number);
+                    context.Reservations.Remove(toRemove);
+                    context.SaveChanges();
+                }
+            }
+            PopulateReservationsDataGrid();
         }
     }
 }

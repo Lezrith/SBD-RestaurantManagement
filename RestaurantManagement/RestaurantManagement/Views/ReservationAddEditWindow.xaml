@@ -8,7 +8,7 @@
         xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.ReservationAddEditWindow"
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         mc:Ignorable="d"
-        Title="ReservationAddEditWindow" Width="300" BorderThickness="1,0,1,1" BorderBrush="Black" ResizeMode="NoResize" Loaded="MetroWindow_Loaded" Height="190">
+        Title="ReservationAddEditWindow" Width="300" BorderThickness="1,0,1,1" BorderBrush="Black" ResizeMode="NoResize" Loaded="MetroWindow_Loaded" Height="216">
     <Controls:MetroWindow.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
         <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -45,16 +45,19 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Content="Data:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" />
-        <DatePicker x:Name="dATEDatePicker" Grid.Column="1" Margin="3,3,0,3" Grid.Row="0" SelectedDate="{Binding DATE, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        <DatePicker x:Name="dATEDatePicker" DisplayDateStart="01/01/1990" Grid.Column="1" Margin="3,3,0,3" Grid.Row="0" SelectedDate="{Binding DATE, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
         <Label Content="Początek:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" />
-        <wpfTool:TimePicker x:Name="sTARTTimePicker" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="1" Text="{Binding START, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        <wpfTool:TimePicker x:Name="sTARTTimePicker" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="1" Text="{Binding START, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" AllowTextInput="False" TimeInterval="0:1:0" />
         <Label Content="Koniec" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" />
-        <wpfTool:TimePicker x:Name="endTimePicker" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="2" Text="{Binding End, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        <wpfTool:TimePicker x:Name="endTimePicker" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="2" Text="{Binding End, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" AllowTextInput="False" TimeInterval="0:1:0" />
         <Label Content="Nazwisko:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" />
         <TextBox x:Name="nameTextBox" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="3" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
         <Label Content="Nr stolika:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" />
-        <ComboBox x:Name="table_NumberComboBox" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="4" Text="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+        <ComboBox x:Name="table_NumberComboBox" Grid.Column="1" Height="23" Margin="3,3,0,3" Grid.Row="4" Text="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="NUMBER" VerticalAlignment="Center" />
+        <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Click="confirmButton_Click" />
+        <Button x:Name="cancelButton" Grid.ColumnSpan="2" Content="Anuluj" HorizontalAlignment="Right" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="0,0,60,0" Click="cancelButton_Click" />
     </Grid>
 </Controls:MetroWindow>
