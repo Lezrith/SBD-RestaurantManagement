@@ -24,6 +24,7 @@ namespace RestaurantManagement.Views
         public EmployeesView()
         {
             InitializeComponent();
+            PopulateEmployeesDataGrid();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
@@ -35,14 +36,42 @@ namespace RestaurantManagement.Views
         {
             var addEditWindow = new EmployeeAddEditWindow(title, order);
             addEditWindow.ShowDialog();
+            PopulateEmployeesDataGrid();
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)
         {
-            var selectedOrders = employeesDataGrid.SelectedItems;
-            if (selectedOrders.Count == 1)
+            var selectedEmployees = employeesDataGrid.SelectedItems;
+            if (selectedEmployees.Count == 1)
             {
-                OpenEmployeeAddEditWindow("Edytuj pracownika", null);
+                OpenEmployeeAddEditWindow("Edytuj pracownika", (Employee)selectedEmployees[0]);
+            }
+        }
+
+        private void PopulateEmployeesDataGrid()
+        {
+            using (var context = new RestaurantDBEntities())
+            {
+                employeesDataGrid.ItemsSource = context.Employees.ToList();
+            }
+        }
+
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedEmployees = employeesDataGrid.SelectedItems;
+            if (selectedEmployees.Count == 1)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    var id = ((Employee)selectedEmployees[0]).ID;
+                    var employee = context.Employees.SingleOrDefault(em => em.ID == id);
+                    if (employee != null)
+                    {
+                        employee.Position = context.Positions.SingleOrDefault(p => p.Name == "Zwolniony");
+                        context.SaveChanges();
+                    }
+                }
+                PopulateEmployeesDataGrid();
             }
         }
     }

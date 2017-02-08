@@ -34,7 +34,7 @@ namespace RestaurantManagement
                     Array.Copy(hash, 0, hashBytes, 16, 20);
                 }
             }
-            return Convert.ToBase64String(hashBytes);
+            return Convert.ToBase64String(hashBytes).Substring(0, 20);
         }
 
         public static bool IsInteger(string text)
