@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using RestaurantManagement.Model;
 
 namespace RestaurantManagement
 {
@@ -30,13 +31,41 @@ namespace RestaurantManagement
 
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = username = userIDTextBox.Text;
+            string username = userIDTextBox.Text;
             string password = passwordBox.Password;
             if (username == string.Empty) userIDTextBox.BorderBrush = Brushes.Red;
             if (password == string.Empty) passwordBox.BorderBrush = Brushes.Red;
             if (username != string.Empty && password != string.Empty)
             {
-                //try to login user
+                using (var context = new RestaurantDBEntities())
+                {
+                    var user = context.Employees.Include("Position.PRIVILIGES").FirstOrDefault(em => em.ID == Int32.Parse(username));
+                    if (user != null)
+                    {
+                        if (user.Position.PRIVILEGES.FirstOrDefault(p => p.Name == "CAN_LOG_IN") != null)
+                        {
+                            if (Common.IsAssemblyDebugBuild() || user.Hashed_password == Common.HashString(password))
+                            {
+                                var mainWindow = new MainWindow();
+                                mainWindow.user = user;
+                                mainWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                warningLabel.Content = "Błędne hasło";
+                            }
+                        }
+                        else
+                        {
+                            warningLabel.Content = "Nie masz uprawnień";
+                        }
+                    }
+                    else
+                    {
+                        warningLabel.Content = "Nie ma takiego używtkownika";
+                    }
+                }
             }
             else warningLabel.Content = "Uzupełnij puste pola.";
         }

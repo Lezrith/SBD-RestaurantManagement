@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using RestaurantManagement.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,16 @@ namespace RestaurantManagement
     /// </summary>
     public partial class MainWindow : MetroWindow
     {
+        public Employee user { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            using (var context = new RestaurantDBEntities())
+            {
+                this.user = context.Employees.FirstOrDefault(em => em.ID == 7);
+            }
         }
 
         /*private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)

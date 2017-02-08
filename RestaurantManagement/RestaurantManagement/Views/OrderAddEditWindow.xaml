@@ -7,9 +7,8 @@
         xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
         xmlns:local="clr-namespace:RestaurantManagement.Views"
         xmlns:RestaurantManagement="clr-namespace:RestaurantManagement" x:Class="RestaurantManagement.Views.OrderAddEditWindow"
-        mc:Ignorable="d"
-        d:DesignHeight="400" d:DesignWidth="300"
-        Title="OrderAddEditWindow" Width="350" Height="400" BorderThickness="1,0,1,1" Loaded="MetroWindow_Loaded" BorderBrush="Black" ResizeMode="NoResize">
+        mc:Ignorable="d" d:DesignWidth="300"
+        Title="OrderAddEditWindow" Width="350" Height="368.75" BorderThickness="1,0,1,1" Loaded="MetroWindow_Loaded" BorderBrush="Black" ResizeMode="NoResize">
     <Controls:MetroWindow.Resources>
         <SolidColorBrush x:Key="LazurBlue" Color="#41b1e1" />
         <Style TargetType="{x:Type TabItem}" BasedOn="{StaticResource {x:Type TabItem}}">
@@ -41,27 +40,21 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="0" Content="Data/Godzina:" Height="24" Width="93" />
         <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Nr stolika:" Height="24" Width="70" />
-        <ComboBox x:Name="table_NumberTextBox" VerticalAlignment="Center" Text="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3,3,-69,3" Height="26" Grid.Column="1" />
+        <ComboBox x:Name="table_NumberComboBox" VerticalAlignment="Center" SelectedValue="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="NUMBER" SelectedValuePath="NUMBER" Grid.Row="1" Margin="3,3,-69,3" Height="26" Grid.Column="1" />
         <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Metoda płatności:" Height="24" Width="116" />
-        <ComboBox x:Name="payment_method_NameComboBox" VerticalAlignment="Center" Grid.Row="2" Margin="3,3,-69,3" ItemsSource="{Binding}" Height="26" DisplayMemberPath="Payment_method_Name" Grid.Column="1">
-            <ComboBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel />
-                </ItemsPanelTemplate>
-            </ComboBox.ItemsPanel>
-        </ComboBox>
-        <wpfTool:DateTimePicker Grid.Column="1" Margin="3,5,-69,5" VerticalAlignment="Center" Height="20" />
+        <ComboBox x:Name="payment_method_NameComboBox" VerticalAlignment="Center" Grid.Row="2" Margin="3,3,-69,3" Height="26" Text="{Binding Payment_method_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="Name" Grid.Column="1" />
         <Label Content="Dania:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,4" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="68" />
-        <ComboBox x:Name="dish_NameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="3,3,0,3" Grid.Row="3" Text="{Binding Dish_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="144" />
+        <ComboBox x:Name="dish_NameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="3,3,0,3" Grid.Row="3" DisplayMemberPath="Name" VerticalAlignment="Center" Width="144" />
         <TextBox x:Name="quantityTextBox" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,3,-39,3" Grid.Row="3" Text="{Binding Quantity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="40" />
-        <Button x:Name="addButton" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,-69,2" Grid.Row="3" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}">
+        <Button x:Name="addButton" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,-69,2" Grid.Row="3" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}" Click="addButton_Click">
             <Rectangle Width="10" Height="10"
                 Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
                 <Rectangle.OpacityMask>
@@ -69,17 +62,23 @@
                 </Rectangle.OpacityMask>
             </Rectangle>
         </Button>
-        <DataGrid x:Name="orderContentsDataGrid" Grid.ColumnSpan="2" ItemsSource="{Binding}" Grid.Row="4" Grid.RowSpan="1" SelectionMode="Single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserResizeRows="False" Margin="0,0,-65,-211" HorizontalAlignment="Left" Width="340">
-            <DataGrid.ItemContainerStyle>
-                <Style>
-                    <Setter Property="Control.HorizontalContentAlignment" Value="Stretch" />
-                    <Setter Property="Control.VerticalContentAlignment" Value="Stretch" />
-                </Style>
-            </DataGrid.ItemContainerStyle>
+        <DataGrid x:Name="ordering_dishesDataGrid" AutoGenerateColumns="False" Grid.ColumnSpan="2" EnableRowVirtualization="True" Margin="0,0,-72,0" Grid.Row="4" Grid.RowSpan="1" RowDetailsVisibilityMode="VisibleWhenSelected" MinHeight="210" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" IsReadOnly="True">
+            <DataGrid.ContextMenu>
+                <ContextMenu FontFamily="/RestaurantManagement;component/Resources/Fonts/#Work Sans Medium">
+                    <MenuItem Header="Usuń" Click="MenuItem_Click">
+                        <MenuItem.Icon>
+                            <ContentPresenter Content="{DynamicResource appbar_list_delete}" Height="{Binding Header.ActualHeight, ElementName=menuItem1}" Width="{Binding Header.ActualHeight, ElementName=menuItem1}" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Nazwa" IsReadOnly="True" />
-                <DataGridTextColumn Binding="{x:Null}" ClipboardContentBinding="{x:Null}" Header="Ilość" IsReadOnly="True" />
+                <DataGridTextColumn x:Name="dish_IDColumn" Binding="{Binding ID}" Header="ID" />
+                <DataGridTextColumn x:Name="dish_NameColumn" Binding="{Binding Name}" Header="Danie" />
+                <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Ilość" />
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Click="confirmButton_Click" />
+        <Button x:Name="cancelButton" Content="Anuluj" HorizontalAlignment="Right" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="0,0,1,0" Click="cancelButton_Click" Grid.Column="1" />
     </Grid>
 </Controls:MetroWindow>

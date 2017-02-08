@@ -152,6 +152,7 @@
     <Compile Include="Model\Order.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\OrderExtension.cs" />
     <Compile Include="Model\Ordering_dishes.cs">
       <DependentUpon>RestaurantModel.tt</DependentUpon>
     </Compile>

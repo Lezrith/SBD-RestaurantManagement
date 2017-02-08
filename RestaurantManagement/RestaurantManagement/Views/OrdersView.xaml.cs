@@ -35,8 +35,10 @@ namespace RestaurantManagement.Views
 
         private void OpenOrderAddEditWindow(string title, Order order)
         {
-            var addEditWindow = new OrderAddEditWindow(title, order);
+            var window = (MainWindow)Window.GetWindow(this);
+            var addEditWindow = new OrderAddEditWindow(title, order, window.user);
             addEditWindow.ShowDialog();
+            PopulateOrdersDataGrid();
         }
 
         private void editButton_Click(object sender, RoutedEventArgs e)
@@ -44,31 +46,42 @@ namespace RestaurantManagement.Views
             var selectedOrders = ordersDataGrid.SelectedItems;
             if (selectedOrders.Count == 1)
             {
-                OpenOrderAddEditWindow("Edytuj zamówienie", null);
+                OpenOrderAddEditWindow("Edytuj zamówienie", selectedOrders[0] as Order);
             }
         }
 
         private void PopulateOrdersDataGrid()
         {
-            //get menu from database, add it to ObservableList<> and bind it to ItemSource property
-            //add bindings to columns, set columns readonly
-            var tests = new ObservableCollection<Test2>();
-            tests.Add(new Test2("haha", 1));
-            tests.Add(new Test2("hehe", 2));
-            tests.Add(new Test2("hihi", 3));
-            ordersDataGrid.ItemsSource = tests;
+            using (var context = new RestaurantDBEntities())
+            {
+                var orders = context.Orders.Include("Ordering_dishes").ToList();
+                foreach (var o in orders)
+                {
+                    o.fullPrice = 0;
+                    foreach (var od in o.Ordering_dishes)
+                    {
+                        o.fullPrice += od.Dish.Price * od.Quantity;
+                    }
+                }
+                ordersDataGrid.ItemsSource = orders;
+            }
         }
-    }
 
-    public class Test2
-    {
-        public string Payment_method_Name { get; set; }
-        public int Employee_ID { get; set; }
-
-        public Test2(string a, int b)
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Payment_method_Name = a;
-            this.Employee_ID = b;
+            var selectedOrders = ordersDataGrid.SelectedItems;
+            if (selectedOrders.Count == 1)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    var toDelete = (Order)selectedOrders[0];
+                    var or = context.Orders.ToList().Find(o => o.Table_Number == toDelete.Table_Number && o.Employee_ID == toDelete.Employee_ID && o.TIME.Date == toDelete.TIME.Date && o.TIME.Hour == toDelete.TIME.Hour && o.TIME.Minute == toDelete.TIME.Minute);
+                    or.Ordering_dishes.Clear();
+                    context.Orders.Remove(or);
+                    context.SaveChanges();
+                }
+            }
+            PopulateOrdersDataGrid();
         }
     }
 }

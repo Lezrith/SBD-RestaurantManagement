@@ -49,5 +49,12 @@ namespace RestaurantManagement
             string regex = String.Format("^\\d{{1,{0}}}(,\\d{{0,{1}}})?$", precision - scale, scale);
             return Regex.IsMatch(text, regex);
         }
+
+        public static T Cast<T>(T typeHolder, Object x)
+        {
+            // typeHolder above is just for compiler magic
+            // to infer the type to cast x to
+            return (T)x;
+        }
     }
 }
