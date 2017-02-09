@@ -55,34 +55,54 @@ namespace RestaurantManagement.Views
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
-            if (dATEDatePicker.IsEnabled)
+            bool canExit = true;
+            if (supplier_NameComboBox.SelectedIndex == -1)
             {
+                canExit = false;
+                supplier_NameComboBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (costTextBox.Text == "")
+            {
+                canExit = false;
+                costTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (items_in_deliveriesDataGrid.Items.Count == 0)
+            {
+                canExit = false;
+                items_in_deliveriesDataGrid.BorderBrush = System.Windows.Media.Brushes.Red;
+                items_in_deliveriesDataGrid.BorderThickness = new Thickness(1, 1, 1, 1);
+            }
+            if (canExit)
+            {
+                if (dATEDatePicker.IsEnabled)
+                {
+                    using (var context = new RestaurantDBEntities())
+                    {
+                        context.Deliveries.Add(this.delivery);
+                        context.SaveChanges();
+                    }
+                }
+                else
+                {
+                    using (var context = new RestaurantDBEntities())
+                    {
+                        context.Deliveries.Attach(this.delivery);
+                        context.Entry(this.delivery).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                }
                 using (var context = new RestaurantDBEntities())
                 {
-                    context.Deliveries.Add(this.delivery);
+                    var del = context.Deliveries.FirstOrDefault(d => d.Supplier_Name == this.delivery.Supplier_Name && d.DATE == this.delivery.DATE);
+                    del.Items_in_deliveries.Clear();
+                    foreach (var it in this.delivery.Items_in_deliveries)
+                    {
+                        del.Items_in_deliveries.Add(new Items_in_deliveries { Delivery = del, Ingredient_Name = it.Ingredient_Name, Quantity = it.Quantity });
+                    }
                     context.SaveChanges();
                 }
+                this.Close();
             }
-            else
-            {
-                using (var context = new RestaurantDBEntities())
-                {
-                    context.Deliveries.Attach(this.delivery);
-                    context.Entry(this.delivery).State = EntityState.Modified;
-                    context.SaveChanges();
-                }
-            }
-            using (var context = new RestaurantDBEntities())
-            {
-                var del = context.Deliveries.FirstOrDefault(d => d.Supplier_Name == this.delivery.Supplier_Name && d.DATE == this.delivery.DATE);
-                del.Items_in_deliveries.Clear();
-                foreach (var it in this.delivery.Items_in_deliveries)
-                {
-                    del.Items_in_deliveries.Add(new Items_in_deliveries { Delivery = del, Ingredient_Name = it.Ingredient_Name, Quantity = it.Quantity });
-                }
-                context.SaveChanges();
-            }
-            this.Close();
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
@@ -92,27 +112,39 @@ namespace RestaurantManagement.Views
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            var contents = (from it in delivery.Items_in_deliveries
-                            where it.Ingredient_Name == ingredient_NameComboBox.Text
-                            select it).FirstOrDefault();
-
-            if (contents == null)
+            if (Common.ExtractInteger(quantityTextBox.Text) != "" && ingredient_NameComboBox.SelectedIndex != -1)
             {
-                var it = new Items_in_deliveries
+                quantityTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+                ingredient_NameComboBox.BorderBrush = System.Windows.Media.Brushes.Black;
+                items_in_deliveriesDataGrid.BorderThickness = new Thickness(0, 0, 0, 0);
+                var contents = (from it in delivery.Items_in_deliveries
+                                where it.Ingredient_Name == ingredient_NameComboBox.Text
+                                select it).FirstOrDefault();
+
+                string quantity = Common.ExtractInteger(quantityTextBox.Text);
+                if (contents == null)
                 {
-                    Quantity = Int32.Parse(quantityTextBox.Text),
-                    Ingredient_Name = ingredient_NameComboBox.Text,
-                    Supplier_Name = this.delivery.Supplier_Name,
-                    Delivery_Date = this.delivery.DATE
-                };
-                delivery.Items_in_deliveries.Add(it);
+                    var it = new Items_in_deliveries
+                    {
+                        Quantity = Int32.Parse(quantity),
+                        Ingredient_Name = ingredient_NameComboBox.Text,
+                        Supplier_Name = this.delivery.Supplier_Name,
+                        Delivery_Date = this.delivery.DATE
+                    };
+                    delivery.Items_in_deliveries.Add(it);
+                }
+                else
+                {
+                    contents.Quantity = Int32.Parse(quantity);
+                }
+
+                PopulateItemsInDeliveriesDataGrid();
             }
             else
             {
-                contents.Quantity = Int32.Parse(quantityTextBox.Text);
+                quantityTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+                ingredient_NameComboBox.BorderBrush = System.Windows.Media.Brushes.Red;
             }
-
-            PopulateItemsInDeliveriesDataGrid();
         }
 
         private void PopulateItemsInDeliveriesDataGrid()
@@ -146,6 +178,30 @@ namespace RestaurantManagement.Views
             {
                 e.Handled = true;
             }
+        }
+
+        private void ingredient_NameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var ingredient = ingredient_NameComboBox.SelectedItem as Ingredient;
+            if (ingredient != null) quantityTextBox.Text = Common.ExtractInteger(quantityTextBox.Text) + ingredient.Unit;
+            ingredient_NameComboBox.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void quantityTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            quantityTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+            e.Handled = !Common.IsInteger(e.Text);
+        }
+
+        private void quantityTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var ingredient = ingredient_NameComboBox.SelectedItem as Ingredient;
+            if (ingredient != null) quantityTextBox.Text = Common.ExtractInteger(quantityTextBox.Text) + ingredient.Unit;
+        }
+
+        private void supplier_NameComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            supplier_NameComboBox.BorderBrush = System.Windows.Media.Brushes.Black;
         }
     }
 }

@@ -56,5 +56,28 @@ namespace RestaurantManagement
             // to infer the type to cast x to
             return (T)x;
         }
+
+        public static String ExtractInteger(String s)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var c in s)
+            {
+                if (Common.IsInteger(c.ToString())) sb.Append(c);
+            }
+            return sb.ToString();
+        }
+
+        public static bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

@@ -39,7 +39,8 @@ namespace RestaurantManagement
             {
                 using (var context = new RestaurantDBEntities())
                 {
-                    var user = context.Employees.Include("Position.PRIVILIGES").FirstOrDefault(em => em.ID == Int32.Parse(username));
+                    int id = Int32.Parse(username);
+                    var user = context.Employees.Include("Position.PRIVILEGES").FirstOrDefault(em => em.ID == id);
                     if (user != null)
                     {
                         if (user.Position.PRIVILEGES.FirstOrDefault(p => p.Name == "CAN_LOG_IN") != null)
@@ -78,6 +79,11 @@ namespace RestaurantManagement
         private void passwordBox_GotFocus(object sender, RoutedEventArgs e)
         {
             if (passwordBox.BorderBrush == System.Windows.Media.Brushes.Red) passwordBox.ClearValue(BorderBrushProperty);
+        }
+
+        private void userIDTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !Common.IsInteger(e.Text);
         }
     }
 }

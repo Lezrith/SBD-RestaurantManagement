@@ -56,29 +56,71 @@ namespace RestaurantManagement.Views
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
-            if (dATEDatePicker.IsEnabled)
+            bool canExit = true;
+            if (nameTextBox.Text == "")
             {
-                using (var context = new RestaurantDBEntities())
-                {
-                    context.Reservations.Add(this.reservation);
-                    context.SaveChanges();
-                }
+                canExit = false;
+                nameTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
             }
-            else
+            if (table_NumberComboBox.SelectedIndex == -1)
             {
-                using (var context = new RestaurantDBEntities())
-                {
-                    context.Reservations.Attach(this.reservation);
-                    context.Entry(this.reservation).State = EntityState.Modified;
-                    context.SaveChanges();
-                }
+                canExit = false;
+                table_NumberComboBox.BorderBrush = System.Windows.Media.Brushes.Red;
             }
-            this.Close();
+            if (this.reservation.START >= this.reservation.End)
+            {
+                canExit = false;
+                sTARTTimePicker.BorderBrush = System.Windows.Media.Brushes.Red;
+                endTimePicker.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (canExit)
+            {
+                if (dATEDatePicker.IsEnabled)
+                {
+                    using (var context = new RestaurantDBEntities())
+                    {
+                        context.Reservations.Add(this.reservation);
+                        context.SaveChanges();
+                    }
+                }
+                else
+                {
+                    using (var context = new RestaurantDBEntities())
+                    {
+                        context.Reservations.Attach(this.reservation);
+                        context.Entry(this.reservation).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                }
+                this.Close();
+            }
         }
 
         private void cancelButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void sTARTTimePicker_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            sTARTTimePicker.BorderBrush = System.Windows.Media.Brushes.Black;
+            endTimePicker.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void endTimePicker_ValueChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        {
+            endTimePicker.BorderBrush = System.Windows.Media.Brushes.Black;
+            sTARTTimePicker.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void table_NumberComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            table_NumberComboBox.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void nameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            nameTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
         }
     }
 }

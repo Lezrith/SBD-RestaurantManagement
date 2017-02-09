@@ -59,29 +59,125 @@ namespace RestaurantManagement.Views
 
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
+            bool canExit = true;
             using (var context = new RestaurantDBEntities())
             {
-                if (!nameTextBox.IsEnabled)
+                if (nameTextBox.Text == "" || context.Suppliers.FirstOrDefault(s => s.Name == nameTextBox.Text) != null)
                 {
-                    context.Addresses.Add(this.address);
-                    context.SaveChanges();
-                    this.supplier.Address = this.address;
-                    this.address.Supplier = this.supplier;
-                    context.Addresses.Attach(this.address);
-                    context.Entry(this.address).State = EntityState.Modified;
-                    context.Suppliers.Add(this.supplier);
-                    context.SaveChanges();
-                }
-                else
-                {
-                    context.Suppliers.Attach(this.supplier);
-                    context.Entry(this.supplier).State = EntityState.Modified;
-                    context.Addresses.Attach(this.address);
-                    context.Entry(this.address).State = EntityState.Modified;
-                    context.SaveChanges();
+                    canExit = false;
+                    nameTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
                 }
             }
-            this.Close();
+            if (!Common.IsValidEmail(email_addressTextBox.Text))
+            {
+                canExit = false;
+                email_addressTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (phone_numberTextBox.Text.Length != 9)
+            {
+                canExit = false;
+                phone_numberTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (streetTextBox.Text == "")
+            {
+                canExit = false;
+                streetTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (nUMBERTextBox.Text == "")
+            {
+                canExit = false;
+                nUMBERTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (postalCodeTextBox.Text.Length != 6)
+            {
+                canExit = false;
+                postalCodeTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (cityTextBox.Text == "")
+            {
+                canExit = false;
+                cityTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            if (canExit)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    if (!nameTextBox.IsEnabled)
+                    {
+                        context.Addresses.Add(this.address);
+                        context.SaveChanges();
+                        this.supplier.Address = this.address;
+                        this.address.Supplier = this.supplier;
+                        context.Addresses.Attach(this.address);
+                        context.Entry(this.address).State = EntityState.Modified;
+                        context.Suppliers.Add(this.supplier);
+                        context.SaveChanges();
+                    }
+                    else
+                    {
+                        context.Suppliers.Attach(this.supplier);
+                        context.Entry(this.supplier).State = EntityState.Modified;
+                        context.Addresses.Attach(this.address);
+                        context.Entry(this.address).State = EntityState.Modified;
+                        context.SaveChanges();
+                    }
+                }
+                this.Close();
+            }
+        }
+
+        private void nameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            nameTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void email_addressTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            email_addressTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void phone_numberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            phone_numberTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+            e.Handled = !Common.IsInteger(e.Text);
+        }
+
+        private void streetTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            streetTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+        }
+
+        private void nUMBERTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            nUMBERTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+            e.Handled = !Common.IsInteger(e.Text);
+        }
+
+        private void flat_numberTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !Common.IsInteger(e.Text);
+        }
+
+        private void postalCodeTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            postalCodeTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
+            if (Common.IsInteger(e.Text))
+            {
+                if (postalCodeTextBox.Text.Length == 1)
+                {
+                    postalCodeTextBox.Text += "-";
+                    postalCodeTextBox.CaretIndex = postalCodeTextBox.Text.Length;
+                }
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void cityTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            cityTextBox.BorderBrush = System.Windows.Media.Brushes.Black;
         }
     }
 }

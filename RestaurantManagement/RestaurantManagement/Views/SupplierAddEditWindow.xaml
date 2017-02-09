@@ -46,11 +46,11 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Nazwa:" Height="24" Width="53" />
-        <TextBox x:Name="nameTextBox" VerticalAlignment="Center" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3" Height="26" Grid.Column="1" />
+        <TextBox x:Name="nameTextBox" VerticalAlignment="Center" Text="{Binding Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3" Height="26" Grid.Column="1" MaxLength="50" TextChanged="nameTextBox_TextChanged" />
         <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="E-mail:" Height="24" Width="53" />
-        <TextBox x:Name="email_addressTextBox" VerticalAlignment="Center" Text="{Binding Email_address, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="26" Grid.Column="1" />
+        <TextBox x:Name="email_addressTextBox" VerticalAlignment="Center" Text="{Binding Email_address, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="26" Grid.Column="1" MaxLength="30" TextChanged="email_addressTextBox_TextChanged" />
         <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Telefon:" Height="24" Width="57" />
-        <TextBox x:Name="phone_numberTextBox" VerticalAlignment="Center" Text="{Binding Phone_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="26" Grid.Column="1" />
+        <TextBox x:Name="phone_numberTextBox" VerticalAlignment="Center" Text="{Binding Phone_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="26" Grid.Column="1" MaxLength="9" PreviewTextInput="phone_numberTextBox_PreviewTextInput" />
         <Grid x:Name="grid2" Margin="0" Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -65,15 +65,15 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Label Content="Ulica:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" />
-            <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="0" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="0" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" TextChanged="streetTextBox_TextChanged" />
             <Label Content="Nr domu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" />
-            <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="1" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="1" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="50" PreviewTextInput="nUMBERTextBox_PreviewTextInput" />
             <Label Content="Numer lokalu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" />
-            <TextBox x:Name="flat_numberTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="2" Text="{Binding Flat_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <TextBox x:Name="flat_numberTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="2" Text="{Binding Flat_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="3" PreviewTextInput="flat_numberTextBox_PreviewTextInput" />
             <Label Content="Kod pocztowy:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" />
-            <TextBox x:Name="postalCodeTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="3" Text="{Binding PostalCode, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <TextBox x:Name="postalCodeTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="3" Text="{Binding PostalCode, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="6" PreviewTextInput="postalCodeTextBox_PreviewTextInput" />
             <Label Content="Miejscowość:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="4" VerticalAlignment="Center" />
-            <TextBox x:Name="cityTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="4" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" />
+            <TextBox x:Name="cityTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="4" Text="{Binding City, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="30" PreviewTextInput="cityTextBox_PreviewTextInput" />
         </Grid>
         <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="4" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Height="26" Click="confirmButton_Click" />
         <Button x:Name="cancelButton" Content="Anuluj" HorizontalAlignment="Right" Grid.Row="4" VerticalAlignment="Bottom" Width="75" Margin="0,0,60,0" Grid.Column="1" Height="26" Click="cancelButton_Click" />

@@ -48,12 +48,12 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
         <Label VerticalAlignment="Center" Grid.Row="1" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Nr stolika:" Height="24" Width="70" />
-        <ComboBox x:Name="table_NumberComboBox" VerticalAlignment="Center" SelectedValue="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="NUMBER" SelectedValuePath="NUMBER" Grid.Row="1" Margin="3,3,-69,3" Height="26" Grid.Column="1" />
+        <ComboBox x:Name="table_NumberComboBox" VerticalAlignment="Center" SelectedValue="{Binding Table_Number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="NUMBER" SelectedValuePath="NUMBER" Grid.Row="1" Margin="3,3,-69,3" Height="26" Grid.Column="1" SelectionChanged="table_NumberComboBox_SelectionChanged" />
         <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,4,0,4" HorizontalAlignment="Left" Grid.Column="0" Content="Metoda płatności:" Height="24" Width="116" />
-        <ComboBox x:Name="payment_method_NameComboBox" VerticalAlignment="Center" Grid.Row="2" Margin="3,3,-69,3" Height="26" Text="{Binding Payment_method_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="Name" Grid.Column="1" />
+        <ComboBox x:Name="payment_method_NameComboBox" VerticalAlignment="Center" Grid.Row="2" Margin="3,3,-69,3" Height="26" Text="{Binding Payment_method_Name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" DisplayMemberPath="Name" Grid.Column="1" SelectionChanged="payment_method_NameComboBox_SelectionChanged" />
         <Label Content="Dania:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,4,0,4" Grid.Row="3" VerticalAlignment="Center" Height="24" Width="68" />
-        <ComboBox x:Name="dish_NameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="3,3,0,3" Grid.Row="3" DisplayMemberPath="Name" VerticalAlignment="Center" Width="144" />
-        <TextBox x:Name="quantityTextBox" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,3,-39,3" Grid.Row="3" Text="{Binding Quantity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="40" />
+        <ComboBox x:Name="dish_NameComboBox" Grid.Column="1" HorizontalAlignment="Left" Height="26" Margin="3,3,0,3" Grid.Row="3" DisplayMemberPath="Name" VerticalAlignment="Center" Width="144" SelectionChanged="dish_NameComboBox_SelectionChanged" />
+        <TextBox x:Name="quantityTextBox" Grid.Column="1" HorizontalAlignment="Right" Height="26" Margin="0,3,-39,3" Grid.Row="3" Text="{Binding Quantity, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="40" PreviewTextInput="quantityTextBox_PreviewTextInput" MaxLength="2" />
         <Button x:Name="addButton" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,-69,2" Grid.Row="3" VerticalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" Width="30" Height="30" Background="{StaticResource LazurBlue}" Click="addButton_Click">
             <Rectangle Width="10" Height="10"
                 Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
@@ -76,6 +76,7 @@
                 <DataGridTextColumn x:Name="dish_IDColumn" Binding="{Binding ID}" Header="ID" />
                 <DataGridTextColumn x:Name="dish_NameColumn" Binding="{Binding Name}" Header="Danie" />
                 <DataGridTextColumn x:Name="quantityColumn" Binding="{Binding Quantity}" Header="Ilość" />
+                <DataGridTextColumn x:Name="partialSumColumn" Binding="{Binding PartialSum, StringFormat=N2}" Header="Suma" />
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="confirmButton" Grid.ColumnSpan="2" Content="Zatwierdź" HorizontalAlignment="Left" Grid.Row="5" VerticalAlignment="Bottom" Width="75" Margin="60,0,0,0" Click="confirmButton_Click" />
