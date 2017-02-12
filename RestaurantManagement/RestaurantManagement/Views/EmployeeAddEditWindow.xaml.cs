@@ -221,8 +221,10 @@ namespace RestaurantManagement.Views
             {
                 if (postalCodeTextBox.Text.Length == 1)
                 {
+                    postalCodeTextBox.Text += e.Text;
                     postalCodeTextBox.Text += "-";
                     postalCodeTextBox.CaretIndex = postalCodeTextBox.Text.Length;
+                    e.Handled = true;
                 }
             }
             else

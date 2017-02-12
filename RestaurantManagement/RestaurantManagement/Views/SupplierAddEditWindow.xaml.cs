@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using System.Text;
+using System.Linq;
 using MahApps.Metro.Controls;
 using RestaurantManagement.Model;
 using System.Data.Entity;
+
+using System.Linq;
+
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace RestaurantManagement.Views
 {
@@ -42,7 +40,7 @@ namespace RestaurantManagement.Views
                 {
                     this.address = context.Addresses.ToList().Find(address => address.Supplier_Name == this.supplier.Name);
                 }
-                nameTextBox.IsEnabled = true;
+                nameTextBox.IsEnabled = false;
             }
             grid1.DataContext = this.supplier;
             grid2.DataContext = this.address;
@@ -60,13 +58,11 @@ namespace RestaurantManagement.Views
         private void confirmButton_Click(object sender, RoutedEventArgs e)
         {
             bool canExit = true;
-            using (var context = new RestaurantDBEntities())
+
+            if (nameTextBox.Text == "")
             {
-                if (nameTextBox.Text == "" || context.Suppliers.FirstOrDefault(s => s.Name == nameTextBox.Text) != null)
-                {
-                    canExit = false;
-                    nameTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
-                }
+                canExit = false;
+                nameTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             if (!Common.IsValidEmail(email_addressTextBox.Text))
             {
@@ -98,11 +94,21 @@ namespace RestaurantManagement.Views
                 canExit = false;
                 cityTextBox.BorderBrush = System.Windows.Media.Brushes.Red;
             }
+            using (var context = new RestaurantDBEntities())
+            {
+                if (nameTextBox.IsEnabled && context.Suppliers.FirstOrDefault(s => s.Name == nameTextBox.Text) != null)
+                {
+                    canExit = false;
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBox.Show("Dostawce o takiej nazwie już istnieje.", "Uwaga");
+                }
+            }
             if (canExit)
             {
                 using (var context = new RestaurantDBEntities())
                 {
-                    if (!nameTextBox.IsEnabled)
+                    if (nameTextBox.IsEnabled)
                     {
                         context.Addresses.Add(this.address);
                         context.SaveChanges();
@@ -165,8 +171,10 @@ namespace RestaurantManagement.Views
             {
                 if (postalCodeTextBox.Text.Length == 1)
                 {
+                    postalCodeTextBox.Text += e.Text;
                     postalCodeTextBox.Text += "-";
                     postalCodeTextBox.CaretIndex = postalCodeTextBox.Text.Length;
+                    e.Handled = true;
                 }
             }
             else

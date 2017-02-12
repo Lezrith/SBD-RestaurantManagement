@@ -22,34 +22,17 @@ CREATE
 GO
 ALTER TABLE Addresses
 ADD
-CHECK ( NUMBER = 1 )
+CHECK ( NUMBER >= 0 )
 GO
-ALTER TABLE Addresses
-ADD CONSTRAINT Arc_2 CHECK (
-( (Supplier_Name IS NOT NULL) AND
-(
-  Employee_ID IS NULL
-)
-) OR
-(
-  (
-    Employee_ID IS NOT NULL
-  )
-  AND
-  (
-    Supplier_Name IS NULL
-  )
-)
-)
-;
-CREATE UNIQUE NONCLUSTERED INDEX
+
+CREATE NONCLUSTERED INDEX
 Addresses_Employee_ID_IDX ON Addresses
 (
 Employee_ID
 )
 ON "default"
 GO
-CREATE UNIQUE NONCLUSTERED INDEX
+CREATE NONCLUSTERED INDEX
 Addresses_Supplier_Name_IDX ON Addresses
 (
 Supplier_Name
@@ -70,7 +53,7 @@ CREATE
   (
     DATE DATETIME NOT NULL ,
     Supplier_Name NVARCHAR (50) NOT NULL ,
-    Cost NUMERIC (5,2) NOT NULL
+    Cost NUMERIC (9,2) NOT NULL
   )
   ON "default"
 GO
@@ -153,7 +136,7 @@ CREATE
     ID            INTEGER NOT NULL IDENTITY NOT FOR REPLICATION ,
     Last_name     NVARCHAR (30) NOT NULL ,
     First_name    NVARCHAR (30) NOT NULL ,
-    Salary        NUMERIC (5,2) NOT NULL ,
+    Salary        NUMERIC (9,2) NOT NULL ,
     Email_address NVARCHAR (30) NOT NULL ,
     Phone_number NVARCHAR (9) NOT NULL ,
     Address_ID    INTEGER NOT NULL ,
@@ -218,7 +201,7 @@ GO
 CREATE
   TABLE Items_in_deliveries
   (
-    Quantity      NUMERIC (5,3) NOT NULL ,
+    Quantity      INT NOT NULL ,
     Delivery_Date DATETIME NOT NULL ,
     Supplier_Name NVARCHAR (50) NOT NULL ,
     Ingredient_Name NVARCHAR (30) NOT NULL

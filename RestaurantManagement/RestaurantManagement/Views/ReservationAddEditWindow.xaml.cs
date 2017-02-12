@@ -73,6 +73,16 @@ namespace RestaurantManagement.Views
                 sTARTTimePicker.BorderBrush = System.Windows.Media.Brushes.Red;
                 endTimePicker.BorderBrush = System.Windows.Media.Brushes.Red;
             }
+            using (var context = new RestaurantDBEntities())
+            {
+                if(dATEDatePicker.IsEnabled && context.Reservations.FirstOrDefault(r=>r.DATE==this.reservation.DATE && r.START<= this.reservation.START && r.End >=this.reservation.START && r.Table_Number==this.reservation.Table_Number)!=null)
+                {
+                    canExit = false;
+                    MessageBoxButton button = MessageBoxButton.OK;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBox.Show("W tym czasie jest już rezerwacja na ten stolik.", "Uwaga");
+                }
+            }
             if (canExit)
             {
                 if (dATEDatePicker.IsEnabled)

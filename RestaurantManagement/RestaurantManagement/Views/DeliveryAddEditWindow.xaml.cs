@@ -72,6 +72,20 @@ namespace RestaurantManagement.Views
                 items_in_deliveriesDataGrid.BorderBrush = System.Windows.Media.Brushes.Red;
                 items_in_deliveriesDataGrid.BorderThickness = new Thickness(1, 1, 1, 1);
             }
+            if (dATEDatePicker.IsEnabled && canExit)
+            {
+                using (var context = new RestaurantDBEntities())
+                {
+                    var de = context.Deliveries.FirstOrDefault(d => d.DATE == this.delivery.DATE && d.Supplier_Name == this.delivery.Supplier_Name);
+                    if(de!=null)
+                    {
+                        canExit = false;
+                        MessageBoxButton button = MessageBoxButton.OK;
+                        MessageBoxImage icon = MessageBoxImage.Warning;
+                        MessageBox.Show("Dostawa o takiej dacie i dostawcy już istnieje.", "Uwaga");
+                    }
+                }
+            }
             if (canExit)
             {
                 if (dATEDatePicker.IsEnabled)
