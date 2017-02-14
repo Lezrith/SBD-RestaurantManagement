@@ -37,6 +37,9 @@
         <TabItem Header="Menu">
             <Frame Source="/Views/MenuView.xaml" />
         </TabItem>
+        <TabItem Header="Składniki">
+            <Frame Source="/Views/IngredientsView.xaml" />
+        </TabItem>
         <TabItem Header="Zamówienia">
             <Frame Source="/Views/OrdersView.xaml" />
         </TabItem>

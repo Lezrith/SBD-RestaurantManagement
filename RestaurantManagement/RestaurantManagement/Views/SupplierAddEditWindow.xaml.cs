@@ -6,9 +6,6 @@ using System.Linq;
 using MahApps.Metro.Controls;
 using RestaurantManagement.Model;
 using System.Data.Entity;
-
-using System.Linq;
-
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
