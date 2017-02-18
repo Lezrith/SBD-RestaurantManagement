@@ -12,6 +12,8 @@ namespace RestaurantManagement.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class RestaurantDBEntities : DbContext
     {
@@ -41,5 +43,14 @@ namespace RestaurantManagement.Model
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<Table> Tables { get; set; }
         public virtual DbSet<Type> Types { get; set; }
+    
+        public virtual ObjectResult<Employee_of_the_month_Result> Employee_of_the_month(Nullable<System.DateTime> monthYear)
+        {
+            var monthYearParameter = monthYear.HasValue ?
+                new ObjectParameter("MonthYear", monthYear) :
+                new ObjectParameter("MonthYear", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Employee_of_the_month_Result>("Employee_of_the_month", monthYearParameter);
+        }
     }
 }

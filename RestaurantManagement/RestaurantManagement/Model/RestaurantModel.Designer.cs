@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Krzysiu\Documents\Krzysiu\Materiały\Sem.5\SBD\SBD-RestaurantManagement\RestaurantManagement\RestaurantManagement\Model\RestaurantModel.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Documents\Programming\C#\SBD-RestaurantManagement\RestaurantManagement\RestaurantManagement\Model\RestaurantModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

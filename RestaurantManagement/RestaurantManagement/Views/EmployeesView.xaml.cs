@@ -74,5 +74,29 @@ namespace RestaurantManagement.Views
                 PopulateEmployeesDataGrid();
             }
         }
+
+        private void employeeOfTheMonthButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (var context = new RestaurantDBEntities())
+            {
+                var today = DateTime.Today;
+                var result = context.Employee_of_the_month(today).FirstOrDefault();
+                string message;
+                if (result != null)
+                {
+                    var employee = context.Employees.FirstOrDefault(em => em.ID == result.ID);
+                    message = "Pracownikiem miesiąca " + today.Month.ToString() + "/" + today.Year.ToString() + " jest: " + employee.ID.ToString() + ", " + employee.First_name + " " + employee.Last_name + ".\n"
+                        + "Obsługiwał zamówienia na kwotę " + result.S + "zł.";
+                }
+                else
+                {
+                    message = "Nie można wyznaczyć pracownika miesiąca ponieważ nie ma jeszcze żadnych zamówień.";
+                }
+
+                MessageBoxButton button = MessageBoxButton.OK;
+                MessageBoxImage icon = MessageBoxImage.Warning;
+                MessageBox.Show(message, "Pracownik miesiąca");
+            }
+        }
     }
 }

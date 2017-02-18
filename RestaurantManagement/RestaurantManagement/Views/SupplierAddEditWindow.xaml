@@ -65,9 +65,9 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Label Content="Ulica:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" />
-            <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="0" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" TextChanged="streetTextBox_TextChanged" />
+            <TextBox x:Name="streetTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="0" Text="{Binding Street, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" TextChanged="streetTextBox_TextChanged" MaxLength="50" />
             <Label Content="Nr domu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="1" VerticalAlignment="Center" />
-            <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="1" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="50" PreviewTextInput="nUMBERTextBox_PreviewTextInput" />
+            <TextBox x:Name="nUMBERTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="1" Text="{Binding NUMBER, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="3" PreviewTextInput="nUMBERTextBox_PreviewTextInput" />
             <Label Content="Numer lokalu:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="2" VerticalAlignment="Center" />
             <TextBox x:Name="flat_numberTextBox" Grid.Column="1" Height="23" Margin="3" Grid.Row="2" Text="{Binding Flat_number, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" MaxLength="3" PreviewTextInput="flat_numberTextBox_PreviewTextInput" />
             <Label Content="Kod pocztowy:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="3" VerticalAlignment="Center" />

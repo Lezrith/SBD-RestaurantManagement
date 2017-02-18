@@ -46,7 +46,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" MinWidth="225.6" />
         </Grid.ColumnDefinitions>
         <Button x:Name="addButton" Content="Dodaj" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Margin="7,0,0,0" MinWidth="131" Click="addButton_Click" />
         <Button x:Name="editButton" Content="Edytuj" Margin="7,36,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" MinWidth="131" Click="editButton_Click" />

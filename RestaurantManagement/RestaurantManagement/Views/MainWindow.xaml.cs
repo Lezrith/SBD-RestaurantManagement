@@ -35,6 +35,13 @@ namespace RestaurantManagement
             }
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var loginWindow = new LoginWindow();
+            loginWindow.Show();
+            this.Close();
+        }
+
         /*private void textBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             var tb = (TextBox)sender;

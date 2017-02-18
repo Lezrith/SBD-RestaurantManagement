@@ -58,7 +58,7 @@
     </TabControl>
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
-            <Button>
+            <Button Click="Button_Click">
                 <StackPanel Orientation="Horizontal">
                     <Rectangle Width="20"
                    Height="20"

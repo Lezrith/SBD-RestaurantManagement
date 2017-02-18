@@ -417,6 +417,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="Employee_of_the_month" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="MonthYear" Type="date" Mode="In" />
+        </Function>
         <EntityContainer Name="RestaurantModelStoreContainer">
           <EntitySet Name="Addresses" EntityType="Self.Addresses" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Deliveries" EntityType="Self.Deliveries" Schema="dbo" store:Type="Tables" />
@@ -1002,7 +1005,14 @@
             <End Role="Positions" EntitySet="Positions" />
             <End Role="PRIVILEGES" EntitySet="PRIVILEGES" />
           </AssociationSet>
+          <FunctionImport Name="Employee_of_the_month" ReturnType="Collection(RestaurantModel.Employee_of_the_month_Result)">
+          <Parameter Name="MonthYear" Mode="In" Type="DateTime" />
+          </FunctionImport>
         </EntityContainer>
+        <ComplexType Name="Employee_of_the_month_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Double" Name="S" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1180,6 +1190,14 @@
               <ScalarProperty Name="Name" ColumnName="Privilege_Name" />
             </EndProperty>
           </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="Employee_of_the_month" FunctionName="RestaurantModel.Store.Employee_of_the_month">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="RestaurantModel.Employee_of_the_month_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="S" ColumnName="S" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

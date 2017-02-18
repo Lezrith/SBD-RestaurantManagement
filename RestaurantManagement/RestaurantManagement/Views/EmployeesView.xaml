@@ -54,6 +54,7 @@
         <Button x:Name="addButton" Content="Dodaj" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" Margin="7,0,0,0" MinWidth="131" Click="addButton_Click" />
         <Button x:Name="editButton" Content="Edytuj" Margin="7,36,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="31" MinWidth="131" Click="editButton_Click" />
         <Button x:Name="deleteButton" Content="Zwolnij" Margin="7,72,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" Click="deleteButton_Click" />
+        <Button x:Name="employeeOfTheMonthButton" Content="Pracownik miesiąca" Margin="7,108,0,0" VerticalAlignment="Top" Controls:ControlsHelper.ContentCharacterCasing="Normal" Grid.Column="1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Top" Height="32" Click="employeeOfTheMonthButton_Click" />
         <DataGrid dgx:DataGridFilter.IsAutoFilterEnabled="True"
             x:Name="employeesDataGrid" RowDetailsVisibilityMode="VisibleWhenSelected" Margin="0" EnableRowVirtualization="True" AutoGenerateColumns="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
             <DataGrid.Columns>

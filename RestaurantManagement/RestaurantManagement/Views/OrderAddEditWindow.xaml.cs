@@ -34,7 +34,7 @@ namespace RestaurantManagement.Views
             using (var context = new RestaurantDBEntities())
             {
                 table_NumberComboBox.ItemsSource = context.Tables.ToList();
-                dish_NameComboBox.ItemsSource = context.Dishes.ToList();
+                dish_NameComboBox.ItemsSource = context.Dishes.Where(d => d.In_menu == true).ToList();
                 payment_method_NameComboBox.ItemsSource = context.Payment_methods.ToList();
             }
             this.user = user;
